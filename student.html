@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+
+<title>
+ABC International School Student Portal
+</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="student.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- HEADER -->
+
+<header class="portalHeader">
+
+
+<div>
+
+<h1>
+🏫 ABC International School
+</h1>
+
+
+<p>
+Student Digital Portal
+</p>
+
+</div>
+
+
+
+<button onclick="logout()">
+Logout
+</button>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- PROFILE CARD -->
+
+
+<section class="profileCard">
+
+
+<img src="images/student.png">
+
+
+
+<div>
+
+
+<h2 id="name">
+Loading...
+</h2>
+
+
+
+<p id="class"></p>
+
+
+<p id="roll"></p>
+
+
+<p id="year"></p>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ACADEMIC RESULT -->
+
+
+<section class="mobileResultCard">
+
+
+
+<div class="schoolResultHeader">
+
+
+<h2>
+🏫 ABC International School
+</h2>
+
+
+<p>
+Academic Report Card
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="studentInfo">
+
+
+<p>
+Student :
+<b id="resultName"></b>
+</p>
+
+
+<p>
+Class :
+<b id="resultClass"></b>
+</p>
+
+
+<p>
+Exam :
+<b id="examName"></b>
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<h3 class="sectionTitle">
+
+📊 Subject Marks
+
+</h3>
+
+
+
+<table class="mobileMarksTable">
+
+<thead>
+
+<tr>
+
+<th>
+Subject
+</th>
+
+
+<th>
+Marks
+</th>
+
+
+<th>
+Out Of
+</th>
+
+
+<th>
+Grade
+</th>
+
+
+</tr>
+
+</thead>
+
+
+<tbody id="marksTable">
+
+</tbody>
+
+
+</table>
+
+
+
+
+
+
+
+
+<div class="overallResult">
+
+
+<h3>
+Overall Result
+</h3>
+
+
+<p>
+Total Marks :
+<b id="totalMarks"></b>
+</p>
+
+
+
+<p>
+Out Of :
+<b id="outOfMarks"></b>
+</p>
+
+
+
+<p>
+Percentage :
+<b id="percentage"></b>
+</p>
+
+
+
+<p>
+Grade :
+<b id="grade"></b>
+</p>
+
+
+
+<p>
+Status :
+<b id="status"></b>
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="teacherRemark">
+
+
+<h3>
+Teacher Remark
+</h3>
+
+
+<p id="remark"></p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- DASHBOARD GRID -->
+
+
+<section class="dashboardGrid">
+
+
+
+
+
+
+<!-- ATTENDANCE -->
+
+
+<div class="portalCard">
+
+
+<h3>
+📅 Attendance
+</h3>
+
+
+
+<select id="month" onchange="changeMonth()">
+
+
+<option>
+January
+</option>
+
+
+<option>
+February
+</option>
+
+
+<option>
+March
+</option>
+
+
+<option>
+April
+</option>
+
+
+<option>
+May
+</option>
+
+
+<option>
+June
+</option>
+
+
+<option>
+July
+</option>
+
+
+<option>
+August
+</option>
+
+
+<option>
+September
+</option>
+
+
+<option>
+October
+</option>
+
+
+<option>
+November
+</option>
+
+
+<option>
+December
+</option>
+
+
+</select>
+
+
+
+
+
+<p id="attendance">
+
+</p>
+
+
+
+<div class="progress">
+
+<div id="attendanceBar">
+
+</div>
+
+</div>
+
+
+<h4 id="attendancePercent">
+
+</h4>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- TEST -->
+
+
+<div class="portalCard">
+
+
+<h3>
+📝 Test Series
+</h3>
+
+
+<p>
+Online Examination
+</p>
+
+
+
+<button onclick="openTest()">
+
+Start Test
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- NOTICE -->
+
+
+<div class="portalCard">
+
+
+<h3>
+📢 Notice
+</h3>
+
+
+
+<ul>
+
+
+<li>
+Exam Schedule Updated
+</li>
+
+
+<li>
+Holiday Notice
+</li>
+
+
+<li>
+Annual Function
+</li>
+
+
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- HOMEWORK -->
+
+
+<div class="portalCard">
+
+
+<h3>
+📚 Homework
+</h3>
+
+
+<p>
+Math Exercise 5
+</p>
+
+
+<p>
+Science Chapter 4
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- FEES -->
+
+
+<div class="portalCard">
+
+
+<h3>
+💰 Fees
+</h3>
+
+
+<p>
+
+Status :
+
+<b class="paid">
+Paid ✅
+</b>
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ACTIVITIES -->
+
+
+<div class="portalCard">
+
+
+<h3>
+🎯 Activities
+</h3>
+
+
+<p>
+
+Sports
+
+<br>
+
+Science Club
+
+<br>
+
+Cultural
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- PROGRAMS -->
+
+
+<div class="portalCard">
+
+
+<h3>
+🏆 Programs
+</h3>
+
+
+<p>
+
+Olympiad
+
+<br>
+
+Workshop
+
+<br>
+
+Seminar
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- GAMES -->
+
+
+<div class="portalCard">
+
+
+<h3>
+🎮 Games
+</h3>
+
+
+<p>
+
+Quiz
+
+<br>
+
+Puzzle
+
+<br>
+
+Learning Games
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- EVENTS -->
+
+
+<div class="portalCard">
+
+
+<h3>
+📅 Events
+</h3>
+
+
+<p>
+
+Annual Function
+
+<br>
+
+Sports Day
+
+<br>
+
+Parent Meeting
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ONLINE TEST RESULT -->
+
+
+<section class="testResultCard">
+
+
+<h2>
+🏫 ABC International School
+</h2>
+
+
+
+<h3>
+Online Test Result
+</h3>
+
+
+
+<div id="resultCard">
+
+No Test Attempt
+
+</div>
+
+
+
+<button onclick="saveResult()">
+
+💾 Save Result
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- DOWNLOAD -->
+
+
+<section class="downloadBox">
+
+
+<h3>
+📄 Result Download
+</h3>
+
+
+
+<button onclick="downloadResult()">
+
+Download PDF
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<script src="students.js"></script>
+
+<script src="student.js"></script>
+
+
+
+</body>
+
+
+</html>
