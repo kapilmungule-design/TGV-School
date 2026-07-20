@@ -346,25 +346,4 @@ Student Portal
 
 
 
-let notice=document.getElementById("noticeText");
-
-let pause=document.getElementById("pauseNotice");
-
-let play=document.getElementById("playNotice");
-
-
-
-pause.onclick=function(){
-
-notice.style.animationPlayState="paused";
-
-}
-
-
-
-play.onclick=function(){
-
-notice.style.animationPlayState="running";
-
-}
 
