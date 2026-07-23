@@ -56,124 +56,463 @@ padding-bottom:80px;
 
 /* ================= HEADER ================= */
 
+/* ===================================
+   PREMIUM SCHOOL APP HEADER
+=================================== */
 
 
-.mainHeader{
+.appHeader{
+
+position:sticky;
+top:0;
+z-index:9999;
+
+
+width:100%;
 
 
 display:flex;
-
 align-items:center;
 
-gap:20px;
 
-padding:20px 40px;
+padding:12px 18px;
 
 
 background:
-
 linear-gradient(
 135deg,
-#003973,
-#005bea
+rgba(255,255,255,0.95),
+rgba(245,248,255,0.90)
 );
 
 
-color:white;
+backdrop-filter:blur(15px);
+
+
+-webkit-backdrop-filter:blur(15px);
+
 
 
 box-shadow:
 
-0 10px 30px rgba(0,0,0,.20);
+0 8px 25px rgba(0,0,0,0.12);
+
+
+
+border-bottom:
+
+1px solid rgba(37,99,235,0.15);
+
+
+
+transition:0.3s ease;
 
 
 }
 
 
 
-.logoBox img{
+/* Hover / Scroll Premium Effect */
+
+.appHeader:hover{
 
 
-width:90px;
+box-shadow:
 
-height:90px;
+0 12px 35px rgba(37,99,235,0.20);
 
 
-border-radius:50%;
+}
+
+
+
+
+
+
+/* LOGO BOX */
+
+
+.schoolLogo{
+
+
+position:relative;
+
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+
+}
+
+
+
+.schoolLogo img{
+
+
+width:72px;
+height:72px;
+
+
+object-fit:cover;
+
+
+border-radius:22px;
+
+
+
+padding:3px;
+
 
 
 background:white;
 
 
-padding:8px;
+
+box-shadow:
+
+0 8px 20px rgba(37,99,235,0.30);
 
 
-object-fit:contain;
+
+border:
+
+3px solid transparent;
+
+
+
+background-image:
+
+linear-gradient(white,white),
+linear-gradient(135deg,#2563eb,#06b6d4);
+
+
+
+background-origin:border-box;
+
+
+background-clip:padding-box,border-box;
+
+
+
+transition:0.4s;
+
 
 
 }
 
 
 
-.schoolTitle h1{
+
+.schoolLogo img:hover{
+
+
+transform:
+
+rotate(-5deg) scale(1.08);
+
+
+
+}
+
+
+
+
+
+/* SCHOOL TEXT */
+
+
+.schoolInfo{
+
+
+margin-left:16px;
+
+
+flex:1;
+
+
+}
+
+
+
+.schoolInfo h1{
 
 
 font-size:35px;
 
 
-font-weight:700;
+font-weight:900;
 
 
-}
+letter-spacing:0.5px;
 
 
+margin:0;
 
-.schoolTitle p{
-
-
-font-size:16px;
-
-
-margin-top:8px;
-
-
-opacity:.9;
-
-
-}
-
-
-
-
-
-
-
-/* ================= NOTICE ================= */
-
-
-
-.notice{
 
 
 background:
 
 linear-gradient(
 90deg,
-#ffd600,
-#ffca28
+#1d4ed8,
+#0f766e
 );
 
 
-padding:12px;
+
+-webkit-background-clip:text;
 
 
-text-align:center;
+color:transparent;
 
 
-font-weight:700;
+
+}
 
 
-font-size:15px;
+
+.schoolInfo p{
+
+
+margin:4px 0 0;
+
+
+font-size:13px;
+
+
+font-weight:500;
+
+
+color:#64748b;
+
+
+letter-spacing:0.4px;
+
+
+}
+
+
+
+
+
+.schoolInfo p:last-child{
+
+
+color:#2563eb;
+
+
+font-weight:600;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SCROLL STICKY EFFECT */
+
+
+body{
+
+
+padding-top:0;
+
+
+}
+
+
+
+.appHeader::after{
+
+
+content:"";
+
+
+position:absolute;
+
+
+bottom:-1px;
+
+
+left:10%;
+
+
+width:80%;
+
+
+height:2px;
+
+
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+#2563eb,
+transparent
+);
+
+
+
+opacity:0.6;
+
+
+}
+
+
+
+
+
+
+
+/* MOBILE DESIGN */
+
+
+@media(max-width:600px){
+
+
+.appHeader{
+
+
+padding:10px 12px;
+
+
+}
+
+
+
+.schoolLogo img{
+
+
+width:58px;
+
+
+height:58px;
+
+
+border-radius:18px;
+
+
+}
+
+
+
+
+.schoolInfo{
+
+
+margin-left:12px;
+
+
+}
+
+
+
+.schoolInfo h1{
+
+
+font-size:22px;
+
+
+line-height:20px;
+
+
+}
+
+
+
+.schoolInfo p{
+
+
+font-size:10px;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+/* SMALL MOBILE */
+
+
+@media(max-width:380px){
+
+
+
+.schoolLogo img{
+
+
+width:52px;
+height:52px;
+
+
+}
+
+
+
+.schoolInfo h1{
+
+
+font-size:14px;
+
+
+}
+
+
+
+.schoolInfo p{
+
+
+font-size:9px;
+
+
+}
+
+
+}
+
+
+
+
+
+/* =================================
+   PREMIUM NOTICE BAR
+================================= */
+
+
+.noticeBox{
+
+padding:8px 12px;
+
+
+background:#f8fafc;
+
+
+}
+
+
+
+
+.notice{
+
+
+position:relative;
 
 
 overflow:hidden;
@@ -182,8 +521,206 @@ overflow:hidden;
 white-space:nowrap;
 
 
+
+display:flex;
+
+
+align-items:center;
+
+
+height:42px;
+
+
+
+border-radius:15px;
+
+
+
+background:
+
+
+linear-gradient(
+90deg,
+#ffb300,
+#ffd600,
+#ff9800
+);
+
+
+
+box-shadow:
+
+
+0 8px 20px rgba(255,193,7,0.35);
+
+
+
+color:#1f2937;
+
+
+
+font-size:14px;
+
+
+
+font-weight:700;
+
+
+
 }
 
+
+
+
+/* SHINE ANIMATION */
+
+
+.notice::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:0;
+
+
+left:-100%;
+
+
+width:60%;
+
+
+height:100%;
+
+
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.6),
+transparent
+);
+
+
+
+animation:
+
+noticeShine 3s infinite;
+
+
+
+}
+
+
+
+
+@keyframes noticeShine{
+
+
+0%{
+
+left:-100%;
+
+}
+
+
+100%{
+
+left:150%;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* NOTICE TEXT */
+
+
+.notice span{
+
+
+display:inline-block;
+
+
+
+padding-left:100%;
+
+
+
+animation:
+
+noticeMove 15s linear infinite;
+
+
+
+}
+
+
+
+
+@keyframes noticeMove{
+
+
+from{
+
+
+transform:translateX(0);
+
+
+}
+
+
+
+to{
+
+
+transform:translateX(-100%);
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:600px){
+
+
+
+.notice{
+
+
+height:38px;
+
+
+font-size:16px;
+
+
+border-radius:12px;
+
+
+}
+
+
+}
 
 
 
@@ -454,71 +991,239 @@ opacity:1;
 /* ================= LOGIN ================= */
 
 
+/* ===================================
+   PREMIUM STUDENT LOGIN CARD
+=================================== */
+
+/* =========================================
+   PREMIUM STUDENT LOGIN SECTION
+   ANDROID APP STYLE
+========================================= */
+
 
 .loginBox{
 
+width:100%;
 
 display:flex;
 
-
 justify-content:center;
 
+align-items:center;
 
-padding:40px 20px;
+
+padding:20px 15px;
+
+
+
+background:
+
+linear-gradient(
+135deg,
+#eef6ff,
+#ffffff
+);
 
 
 }
 
+
+
+/* LOGIN CARD */
 
 
 .loginCard{
 
 
-background:white;
+width:100%;
+
+max-width:400px;
 
 
-width:400px;
+
+padding:28px 25px;
 
 
-padding:35px;
+
+background:
+
+rgba(255,255,255,0.90);
 
 
-border-radius:30px;
+
+backdrop-filter:blur(15px);
+
+-webkit-backdrop-filter:blur(15px);
+
+
+
+border-radius:28px;
+
+
+
+box-shadow:
+
+0 15px 40px rgba(15,23,42,0.15);
+
+
+
+border:
+
+1px solid rgba(37,99,235,0.15);
+
 
 
 text-align:center;
 
 
-box-shadow:
 
-0 20px 50px rgba(0,0,0,.18);
+position:relative;
+
+
+
+overflow:hidden;
+
+
+
+animation:
+
+loginShow .7s ease;
+
 
 
 }
 
+
+
+
+
+
+
+/* ANIMATED TOP LINE */
+
+
+.loginCard::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:0;
+
+
+left:-120%;
+
+
+width:120%;
+
+
+height:5px;
+
+
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+#2563eb,
+#06b6d4,
+#22c55e,
+transparent
+);
+
+
+
+animation:
+
+movingLine 3s linear infinite;
+
+
+}
+
+
+
+
+@keyframes movingLine{
+
+
+0%{
+
+left:-120%;
+
+}
+
+
+100%{
+
+left:120%;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* LOGIN ICON / TITLE */
 
 
 .loginCard h2{
 
 
-color:#005bea;
+font-size:25px;
 
 
-margin-bottom:12px;
+font-weight:800;
+
+
+
+color:#0f172a;
+
+
+
+margin:8px 0 8px;
+
 
 
 }
+
 
 
 
 .loginCard p{
 
 
-color:#555;
+font-size:14px;
+
+
+font-weight:500;
+
+
+color:#64748b;
+
+
+margin:8px 0 18px;
+
 
 
 }
 
+
+
+
+
+
+
+/* INPUT BOX */
 
 
 .loginCard input{
@@ -527,37 +1232,68 @@ color:#555;
 width:100%;
 
 
-padding:15px;
+height:52px;
 
 
-margin:20px 0;
+
+padding:0 18px;
 
 
-border-radius:15px;
+
+border-radius:16px;
 
 
-border:1px solid #ddd;
 
+border:
 
-font-size:16px;
+2px solid #e2e8f0;
+
 
 
 outline:none;
 
 
+
+font-size:15px;
+
+
+
+background:#f8fafc;
+
+
+
+transition:.3s;
+
+
+
 }
+
+
+
+.loginCard input::placeholder{
+
+
+color:#94a3b8;
+
+
+}
+
 
 
 
 .loginCard input:focus{
 
 
-border-color:#005bea;
+background:white;
+
+
+border-color:#2563eb;
+
 
 
 box-shadow:
 
-0 0 10px rgba(0,91,234,.2);
+0 0 0 5px rgba(37,99,235,.12);
 
 
 }
@@ -568,225 +1304,234 @@ box-shadow:
 
 
 
-button{
+/* LOGIN BUTTON */
+
+
+.loginCard button{
+
+
+width:100%;
+
+
+height:52px;
+
+
+margin-top:18px;
+
+
+
+border:none;
+
+
+
+border-radius:16px;
+
+
+
+cursor:pointer;
+
+
+
+font-size:16px;
+
+
+
+font-weight:700;
+
+
+
+color:white;
+
 
 
 background:
 
 linear-gradient(
 135deg,
-#005bea,
-#00c6fb
+#2563eb,
+#06b6d4
 );
 
 
-border:none;
 
+box-shadow:
 
-padding:14px 30px;
+0 10px 25px rgba(37,99,235,.35);
 
-
-border-radius:30px;
-
-
-color:white;
-
-
-font-size:16px;
-
-
-cursor:pointer;
 
 
 transition:.3s;
 
 
-}
-
-
-
-button:hover{
-
-
-transform:scale(1.05);
-
 
 }
 
 
 
+.loginCard button:hover{
+
+
+transform:
+
+translateY(-3px);
 
 
 
+box-shadow:
 
-
-
-/* ================= MOBILE PART 1 ================= */
-
-
-
-@media(max-width:900px){
-
-
-.mainHeader{
-
-
-flex-direction:column;
-
-
-text-align:center;
-
-
-padding:25px;
+0 15px 35px rgba(37,99,235,.45);
 
 
 }
 
 
 
-.schoolTitle h1{
+
+.loginCard button:active{
 
 
-font-size:27px;
-
-
-}
-
-
-
-.schoolTitle p{
-
-
-font-size:14px;
+transform:scale(.96);
 
 
 }
 
 
 
-.schoolIntro{
-
-
-flex-direction:column;
-
-
-padding:20px;
-
-
-text-align:center;
-
-
-}
 
 
 
-.introImage img{
+
+/* ERROR MESSAGE */
 
 
-width:100%;
+#error{
 
 
-height:220px;
-
-
-}
-
-
-
-.loginCard{
-
-
-width:100%;
-
-
-}
-
-
-
-}
-
-
-
-@media(max-width:500px){
-
-
-.logoBox img{
-
-
-width:75px;
-
-
-height:75px;
-
-
-}
-
-
-
-.schoolTitle h1{
-
-
-font-size:23px;
-
-
-}
-
-
-
-.notice{
+margin-top:12px;
 
 
 font-size:13px;
 
 
-}
+font-weight:600;
 
 
-
-.slider{
-
-
-padding:20px;
+color:#ef4444;
 
 
 }
 
 
 
-.slider img{
 
 
-min-width:260px;
 
 
-height:160px;
+/* LOGIN ANIMATION */
+
+
+@keyframes loginShow{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:translateY(35px);
 
 
 }
+
+
+to{
+
+
+opacity:1;
+
+
+transform:translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* MOBILE OPTIMIZATION */
+
+
+@media(max-width:600px){
 
 
 
 .loginBox{
 
 
-padding:25px 15px;
+padding:15px 12px;
 
 
 }
+
 
 
 
 .loginCard{
 
 
-padding:25px;
+padding:24px 20px;
+
+
+border-radius:24px;
 
 
 }
 
 
+
+
+.loginCard h2{
+
+
+font-size:21px;
+
+
 }
 
+
+
+
+.loginCard p{
+
+
+font-size:12px;
+
+
+}
+
+
+
+
+.loginCard input,
+.loginCard button{
+
+
+height:50px;
+
+
+}
+
+
+
+}
 
 
 
@@ -2017,6 +2762,12 @@ line-height:1.7;
 
 /* ================= MOBILE APP BOTTOM NAV ================= */
 
+/* =====================================
+   PREMIUM MOBILE BOTTOM NAVIGATION
+===================================== */
+/* =====================================
+   PREMIUM MOBILE APP BOTTOM NAVIGATION
+===================================== */
 
 
 .bottomNav{
@@ -2025,19 +2776,25 @@ line-height:1.7;
 position:fixed;
 
 
-bottom:0;
+bottom:15px;
 
 
-left:0;
+left:50%;
 
 
-width:100%;
+transform:translateX(-50%);
 
 
-height:70px;
+
+width:92%;
 
 
-background:white;
+max-width:500px;
+
+
+
+height:75px;
+
 
 
 display:flex;
@@ -2049,17 +2806,42 @@ justify-content:space-around;
 align-items:center;
 
 
+
+background:
+
+rgba(255,255,255,0.85);
+
+
+
+backdrop-filter:blur(20px);
+
+
+-webkit-backdrop-filter:blur(20px);
+
+
+
+border-radius:30px;
+
+
+
 box-shadow:
 
-0 -5px 25px rgba(0,0,0,.18);
+0 15px 40px rgba(15,23,42,0.25);
+
+
+
+border:
+
+1px solid rgba(37,99,235,0.15);
+
 
 
 z-index:9999;
 
 
-border-radius:
 
-20px 20px 0 0;
+padding:8px;
+
 
 
 }
@@ -2067,13 +2849,18 @@ border-radius:
 
 
 
+
+
+
 .bottomNav a{
 
 
-text-decoration:none;
+flex:1;
 
 
-color:#555;
+
+height:60px;
+
 
 
 display:flex;
@@ -2082,19 +2869,87 @@ display:flex;
 flex-direction:column;
 
 
+
 align-items:center;
 
 
-font-size:12px;
+justify-content:center;
+
+
+
+text-decoration:none;
+
+
+
+color:#64748b;
+
+
+
+font-size:25px;
+
+
+
+border-radius:22px;
+
+
+
+transition:.35s ease;
+
+
+
+position:relative;
+
+
+
+}
+
+
+
+
+.bottomNav span{
+
+
+font-size:11px;
+
 
 
 font-weight:600;
 
 
-transition:.3s;
+
+margin-top:3px;
+
 
 
 }
+
+
+
+
+
+
+
+/* ACTIVE ITEM */
+
+
+.bottomNav a:first-child{
+
+
+color:#2563eb;
+
+
+background:
+
+linear-gradient(
+135deg,
+#eff6ff,
+#dbeafe
+);
+
+
+}
+
+
 
 
 
@@ -2103,12 +2958,19 @@ transition:.3s;
 .bottomNav a:hover{
 
 
-color:#005bea;
-
-
 transform:
 
-translateY(-5px);
+translateY(-8px);
+
+
+
+color:#2563eb;
+
+
+
+background:
+
+rgba(37,99,235,0.10);
 
 
 }
@@ -2117,10 +2979,68 @@ translateY(-5px);
 
 
 
-.bottomNav a span{
 
 
-margin-top:4px;
+.bottomNav a:hover::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+
+top:5px;
+
+
+
+width:35px;
+
+
+
+height:35px;
+
+
+
+border-radius:50%;
+
+
+
+background:
+
+rgba(37,99,235,.15);
+
+
+
+animation:
+
+pulse .8s;
+
+
+}
+
+
+
+@keyframes pulse{
+
+
+0%{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+
+100%{
+
+transform:scale(1.5);
+
+opacity:0;
+
+}
 
 
 }
@@ -2130,13 +3050,129 @@ margin-top:4px;
 
 
 
-/* ACTIVE PAGE */
 
 
-.activeNav{
+/* ICON FLOAT EFFECT */
 
 
-color:#005bea!important;
+.bottomNav a{
+
+
+animation:
+
+navFloat 4s infinite;
+
+
+}
+
+
+
+@keyframes navFloat{
+
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-3px);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* MOBILE SIZE */
+
+
+@media(max-width:600px){
+
+
+
+.bottomNav{
+
+
+width:95%;
+
+
+height:70px;
+
+
+bottom:10px;
+
+
+border-radius:25px;
+
+
+}
+
+
+
+.bottomNav a{
+
+
+font-size:22px;
+
+
+height:55px;
+
+
+}
+
+
+
+.bottomNav span{
+
+
+font-size:10px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* SMALL MOBILE */
+
+
+@media(max-width:380px){
+
+
+
+.bottomNav{
+
+
+width:96%;
+
+
+}
+
+
+
+.bottomNav span{
+
+
+display:none;
+
+
+}
 
 
 }
