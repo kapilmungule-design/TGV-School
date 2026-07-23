@@ -237,36 +237,24 @@ flex:1;
 
 .schoolInfo h1{
 
-
-font-size:35px;
-
-
-font-weight:900;
-
-
-letter-spacing:0.5px;
-
-
-margin:0;
-
-
-
-background:
-
-linear-gradient(
+background:linear-gradient(
 90deg,
 #1d4ed8,
 #0f766e
 );
 
 
-
+/* Chrome / Android Support */
 -webkit-background-clip:text;
 
 
+/* Standard CSS */
+background-clip:text;
+
+
+-webkit-text-fill-color:transparent;
+
 color:transparent;
-
-
 
 }
 
@@ -3755,7 +3743,7 @@ object-fit:cover;
 padding:25px;
 
 
-}
+} 
 
 
 
