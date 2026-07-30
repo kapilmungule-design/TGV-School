@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+TGV School-Timetable
+</title>
+
+<link rel="stylesheet" href="timetable.css">
+
+</head>
+
+
+<body>
+
+
+
+<!-- HEADER -->
+
+<header class="tableHeader">
+
+
+<div>
+
+<h1>
+📚 TGV-Timetable
+</h1>
+
+<p>
+Tukadogi Gramin Vidyalaya ERP
+</p>
+
+</div>
+
+
+<div class="clock">
+
+⏰
+<span id="clock">
+00:00
+</span>
+
+</div>
+
+
+</header>
+
+
+
+
+
+<!-- SCHOOL INFO -->
+
+
+<section class="schoolInfo">
+
+
+<div class="infoCard">
+
+<h3>
+🏫 Start
+</h3>
+
+<p>
+08:00 AM
+</p>
+
+</div>
+
+
+
+<div class="infoCard">
+
+<h3>
+🍱 Lunch
+</h3>
+
+<p>
+12:30 - 01:00
+</p>
+
+</div>
+
+
+
+
+<div class="infoCard">
+
+<h3>
+⚽ Play
+</h3>
+
+<p>
+02:30 - 03:00
+</p>
+
+</div>
+
+
+
+
+<div class="infoCard">
+
+<h3>
+🏁 Close
+</h3>
+
+<p>
+03:30 PM
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- LIVE STATUS -->
+
+
+<section class="liveStatus">
+
+
+<div class="statusCard">
+
+<span>
+🟢
+</span>
+
+
+<div>
+
+<h4>
+Current Period
+</h4>
+
+<p id="currentClass">
+Checking...
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="statusCard">
+
+<span>
+⏭
+</span>
+
+
+<div>
+
+<h4>
+Next Period
+</h4>
+
+
+<p id="nextClass">
+Loading...
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CLASS BUTTON -->
+
+
+<div class="classMenu">
+
+
+<button onclick="showClass('8')">
+Class 8
+</button>
+
+
+<button onclick="showClass('9')">
+Class 9
+</button>
+
+
+<button onclick="showClass('10')">
+Class 10
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= CLASS 8 ================= -->
+
+
+<section id="class8" class="timeTable active">
+
+
+<h2>
+📘 Class 8
+</h2>
+
+
+
+<div class="tableScroll">
+
+
+<table>
+
+
+<tr>
+
+<th>
+Time
+</th>
+
+<th>
+Subject
+</th>
+
+<th>
+Teacher
+</th>
+
+<th>
+Duration
+</th>
+
+</tr>
+
+
+
+
+<tr class="period"
+data-start="08:00"
+data-end="08:40">
+
+
+<td>
+08:00-08:40
+</td>
+
+<td>
+Mathematics
+</td>
+
+<td>
+Mr Sharma
+</td>
+
+<td>
+40 Min
+</td>
+
+</tr>
+
+
+
+
+
+<tr class="period"
+data-start="08:40"
+data-end="09:20">
+
+
+<td>
+08:40-09:20
+</td>
+
+<td>
+English
+</td>
+
+<td>
+Mrs Patil
+</td>
+
+<td>
+40 Min
+</td>
+
+</tr>
+
+
+
+
+
+<tr class="period"
+data-start="09:20"
+data-end="10:00">
+
+
+<td>
+09:20-10:00
+</td>
+
+<td>
+Science
+</td>
+
+<td>
+Mr Verma
+</td>
+
+<td>
+40 Min
+</td>
+
+</tr>
+
+
+
+
+
+<tr class="period"
+data-start="10:00"
+data-end="10:40">
+
+
+<td>
+10:00-10:40
+</td>
+
+<td>
+Social Science
+</td>
+
+<td>
+Mrs Joshi
+</td>
+
+<td>
+40 Min
+</td>
+
+</tr>
+
+
+
+
+
+<tr class="break">
+
+<td colspan="4">
+
+☕ Short Break
+<br>
+10:40 - 11:00
+
+</td>
+
+</tr>
+
+
+
+
+
+<tr class="period"
+data-start="11:00"
+data-end="11:40">
+
+
+<td>
+11:00-11:40
+</td>
+
+<td>
+Computer
+</td>
+
+<td>
+Mr Kulkarni
+</td>
+
+<td>
+40 Min
+</td>
+
+</tr>
+
+
+
+
+
+<tr class="period"
+data-start="11:40"
+data-end="12:30">
+
+
+<td>
+11:40-12:30
+</td>
+
+<td>
+Hindi
+</td>
+
+<td>
+Mrs Kale
+</td>
+
+<td>
+50 Min
+</td>
+
+</tr>
+
+
+
+
+
+<tr class="lunch">
+
+<td colspan="4">
+
+🍱 Lunch Break
+
+<br>
+
+12:30 - 01:00
+
+</td>
+
+</tr>
+
+
+
+
+
+<tr class="period"
+data-start="13:00"
+data-end="14:00">
+
+
+<td>
+01:00-02:00
+</td>
+
+<td>
+Marathi
+</td>
+
+<td>
+Mrs Deshmukh
+</td>
+
+<td>
+60 Min
+</td>
+
+</tr>
+
+
+
+
+
+<tr class="play">
+
+
+<td colspan="4">
+
+⚽ Play Time
+
+<br>
+
+02:30 - 03:00
+
+</td>
+
+
+</tr>
+
+
+
+
+
+<tr>
+
+
+<td>
+03:00-03:30
+</td>
+
+<td>
+Revision
+</td>
+
+<td>
+Class Teacher
+</td>
+
+<td>
+30 Min
+</td>
+
+
+</tr>
+
+
+
+
+</table>
+
+
+</div>
+
+
+</section>
+
+
+<!-- ================= CLASS 9 ================= -->
+
+
+<section id="class9" class="timeTable">
+
+
+<h2>
+📗 Class 9
+</h2>
+
+
+
+<div class="tableScroll">
+
+
+<table>
+
+
+<tr>
+
+<th>
+Time
+</th>
+
+<th>
+Subject
+</th>
+
+<th>
+Teacher
+</th>
+
+<th>
+Duration
+</th>
+
+</tr>
+
+
+
+
+
+<tr class="period"
+data-start="08:00"
+data-end="08:40">
+
+
+<td>
+08:00-08:40
+</td>
+
+<td>
+Science
+</td>
+
+<td>
+Mr Verma
+</td>
+
+<td>
+40 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+<tr class="period"
+data-start="08:40"
+data-end="09:20">
+
+
+<td>
+08:40-09:20
+</td>
+
+
+<td>
+Mathematics
+</td>
+
+
+<td>
+Mr Sharma
+</td>
+
+
+<td>
+40 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr class="period"
+data-start="09:20"
+data-end="10:00">
+
+
+<td>
+09:20-10:00
+</td>
+
+
+<td>
+English
+</td>
+
+
+<td>
+Mrs Patil
+</td>
+
+
+<td>
+40 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr class="period"
+data-start="10:00"
+data-end="10:40">
+
+
+<td>
+10:00-10:40
+</td>
+
+
+<td>
+Social Science
+</td>
+
+
+<td>
+Mrs Joshi
+</td>
+
+
+<td>
+40 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr class="break">
+
+
+<td colspan="4">
+
+
+☕ Short Break
+
+<br>
+
+10:40 - 11:00
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr class="period"
+data-start="11:00"
+data-end="11:40">
+
+
+<td>
+11:00-11:40
+</td>
+
+
+<td>
+Computer
+</td>
+
+
+<td>
+Mr Kulkarni
+</td>
+
+
+<td>
+40 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr class="period"
+data-start="11:40"
+data-end="12:30">
+
+
+<td>
+11:40-12:30
+</td>
+
+
+<td>
+Hindi
+</td>
+
+
+<td>
+Mrs Kale
+</td>
+
+
+<td>
+50 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr class="lunch">
+
+
+<td colspan="4">
+
+
+🍱 Lunch Break
+
+<br>
+
+12:30 - 01:00
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr class="period"
+data-start="13:00"
+data-end="14:00">
+
+
+<td>
+01:00-02:00
+</td>
+
+
+<td>
+Marathi
+</td>
+
+
+<td>
+Mrs Deshmukh
+</td>
+
+
+<td>
+60 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr class="play">
+
+
+<td colspan="4">
+
+
+⚽ Play Time
+
+<br>
+
+02:30 - 03:00
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+
+
+<td>
+03:00-03:30
+</td>
+
+
+<td>
+Doubt Session
+</td>
+
+
+<td>
+Class Teacher
+</td>
+
+
+<td>
+30 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+</table>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= CLASS 10 ================= -->
+
+
+
+<section id="class10" class="timeTable">
+
+
+<h2>
+📕 Class 10
+</h2>
+
+
+
+
+<div class="tableScroll">
+
+
+<table>
+
+
+
+<tr>
+
+
+<th>
+Time
+</th>
+
+
+<th>
+Subject
+</th>
+
+
+<th>
+Teacher
+</th>
+
+
+<th>
+Duration
+</th>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr class="period"
+data-start="08:00"
+data-end="08:40">
+
+
+<td>
+08:00-08:40
+</td>
+
+
+<td>
+Mathematics
+</td>
+
+
+<td>
+Mr Sharma
+</td>
+
+
+<td>
+40 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr class="period"
+data-start="08:40"
+data-end="09:20">
+
+
+<td>
+08:40-09:20
+</td>
+
+
+<td>
+Science
+</td>
+
+
+<td>
+Mr Verma
+</td>
+
+
+<td>
+40 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr class="period"
+data-start="09:20"
+data-end="10:00">
+
+
+<td>
+09:20-10:00
+</td>
+
+
+<td>
+English
+</td>
+
+
+<td>
+Mrs Patil
+</td>
+
+
+<td>
+40 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr class="period"
+data-start="10:00"
+data-end="10:40">
+
+
+<td>
+10:00-10:40
+</td>
+
+
+<td>
+Social Science
+</td>
+
+
+<td>
+Mrs Joshi
+</td>
+
+
+<td>
+40 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+
+<tr class="break">
+
+
+<td colspan="4">
+
+
+☕ Short Break
+
+<br>
+
+10:40 - 11:00
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+<tr class="period"
+data-start="11:00"
+data-end="12:30">
+
+
+<td>
+11:00-12:30
+</td>
+
+
+<td>
+Board Exam Preparation
+</td>
+
+
+<td>
+All Subject Teachers
+</td>
+
+
+<td>
+90 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr class="lunch">
+
+
+<td colspan="4">
+
+
+🍱 Lunch Break
+
+<br>
+
+12:30 - 01:00
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr class="period"
+data-start="13:00"
+data-end="14:30">
+
+
+<td>
+01:00-02:30
+</td>
+
+
+<td>
+Exam Practice
+</td>
+
+
+<td>
+Class Teacher
+</td>
+
+
+<td>
+90 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr class="play">
+
+
+<td colspan="4">
+
+
+⚽ Play Time
+
+<br>
+
+02:30 - 03:00
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+
+
+<td>
+03:00-03:30
+</td>
+
+
+<td>
+Revision
+</td>
+
+
+<td>
+Subject Teacher
+</td>
+
+
+<td>
+30 Min
+</td>
+
+
+</tr>
+
+
+
+
+
+</table>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+
+<script>
+
+
+// CLASS SWITCH
+
+
+function showClass(classNo){
+
+
+document
+.querySelectorAll(".timeTable")
+.forEach(item=>{
+
+
+item.classList.remove("active");
+
+
+});
+
+
+
+document
+.getElementById("class"+classNo)
+.classList.add("active");
+
+
+
+}
+
+
+
+
+
+
+// LIVE CLOCK
+
+
+function updateClock(){
+
+
+let now=new Date();
+
+
+document
+.getElementById("clock")
+.innerHTML=
+
+now.toLocaleTimeString([],{
+
+hour:"2-digit",
+
+minute:"2-digit"
+
+});
+
+
+}
+
+
+setInterval(updateClock,1000);
+
+
+updateClock();
+
+
+
+
+
+
+
+
+// LIVE PERIOD CHECK
+
+
+function checkPeriod(){
+
+
+let now=new Date();
+
+
+
+let current=
+
+now.getHours()*60+
+
+now.getMinutes();
+
+
+
+let found=false;
+
+
+
+document
+.querySelectorAll(".period")
+.forEach(row=>{
+
+
+let start=row.dataset.start.split(":");
+
+
+let end=row.dataset.end.split(":");
+
+
+
+let startTime=
+
+Number(start[0])*60+
+
+Number(start[1]);
+
+
+
+let endTime=
+
+Number(end[0])*60+
+
+Number(end[1]);
+
+
+
+
+
+if(
+current>=startTime &&
+current<=endTime
+){
+
+
+row.classList.add("running");
+
+
+document
+.getElementById("currentClass")
+.innerHTML=
+
+"🟢 "+
+
+row.children[1].innerText+
+
+"<br>👨‍🏫 "+
+
+row.children[2].innerText;
+
+
+
+found=true;
+
+
+
+}
+
+else{
+
+
+row.classList.remove("running");
+
+
+}
+
+
+
+});
+
+
+
+if(!found){
+
+
+document
+.getElementById("currentClass")
+.innerHTML=
+
+"🏫 No Active Class";
+
+
+}
+
+
+
+}
+
+
+
+setInterval(checkPeriod,1000);
+
+checkPeriod();
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
