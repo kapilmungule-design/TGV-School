@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Unit Converter</title>
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",Arial,sans-serif;
+}
+
+
+body{
+
+background:linear-gradient(
+135deg,
+#dbeafe,
+#dcfce7,
+#fef3c7
+);
+
+min-height:100vh;
+
+}
+
+
+
+.header{
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#16a34a
+);
+
+color:white;
+
+text-align:center;
+
+padding:30px 15px;
+
+border-radius:0 0 35px 35px;
+
+box-shadow:0 8px 25px #0003;
+
+}
+
+
+
+.header h1{
+
+font-size:28px;
+
+}
+
+
+.header p{
+
+font-size:14px;
+
+margin-top:5px;
+
+}
+
+
+
+
+.container{
+
+max-width:850px;
+
+margin:auto;
+
+padding:15px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+padding:20px;
+
+border-radius:25px;
+
+margin-bottom:18px;
+
+box-shadow:0 10px 25px #0002;
+
+}
+
+
+
+.icon{
+
+font-size:45px;
+
+text-align:center;
+
+}
+
+
+
+h2{
+
+text-align:center;
+
+color:#047857;
+
+margin:10px;
+
+}
+
+
+
+select,
+input,
+button{
+
+width:100%;
+
+padding:13px;
+
+margin-top:10px;
+
+border-radius:12px;
+
+border:1px solid #ddd;
+
+font-size:14px;
+
+}
+
+
+
+button{
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#16a34a
+);
+
+color:white;
+
+border:0;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.02);
+
+}
+
+
+
+.result{
+
+margin-top:12px;
+
+padding:12px;
+
+background:#ecfdf5;
+
+color:#065f46;
+
+border-radius:12px;
+
+text-align:center;
+
+font-weight:bold;
+
+}
+
+
+
+.footer{
+
+background:#022c22;
+
+color:white;
+
+text-align:center;
+
+padding:15px;
+
+}
+
+
+
+.footer h3{
+
+letter-spacing:5px;
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="header">
+
+<h1>
+📏 Smart Unit Converter
+</h1>
+
+<p>
+Professional Measurement Tool
+</p>
+
+</div>
+
+
+
+
+
+<div class="container">
+
+
+
+
+
+<!-- LENGTH -->
+
+
+<div class="card">
+
+
+<div class="icon">
+📏
+</div>
+
+
+<h2>
+Advanced Length Converter
+</h2>
+
+
+
+<select id="lengthType">
+
+
+<option value="mft">
+Meter ➡ Feet
+</option>
+
+
+<option value="ftm">
+Feet ➡ Meter
+</option>
+
+
+<option value="min">
+Meter ➡ Inch
+</option>
+
+
+<option value="inm">
+Inch ➡ Meter
+</option>
+
+
+<option value="mfi">
+Meter ➡ Feet + Inch
+</option>
+
+
+<option value="cm_m">
+CM ➡ Meter
+</option>
+
+
+<option value="m_cm">
+Meter ➡ CM
+</option>
+
+
+<option value="cm_in">
+CM ➡ Inch
+</option>
+
+
+<option value="in_cm">
+Inch ➡ CM
+</option>
+
+
+<option value="mm_cm">
+MM ➡ CM
+</option>
+
+
+<option value="cm_mm">
+CM ➡ MM
+</option>
+
+
+<option value="km_m">
+KM ➡ Meter
+</option>
+
+
+<option value="m_km">
+Meter ➡ KM
+</option>
+
+
+<option value="yard_m">
+Yard ➡ Meter
+</option>
+
+
+<option value="m_yard">
+Meter ➡ Yard
+</option>
+
+
+<option value="mile_km">
+Mile ➡ KM
+</option>
+
+
+<option value="km_mile">
+KM ➡ Mile
+</option>
+
+
+
+</select>
+
+
+
+<input 
+id="lengthValue"
+type="number"
+placeholder="Enter Value">
+
+
+
+<button onclick="lengthConvert()">
+
+Convert
+
+</button>
+
+
+
+<div class="result" id="lengthResult">
+
+Result
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- WEIGHT -->
+
+
+<div class="card">
+
+
+<div class="icon">
+⚖️
+</div>
+
+
+<h2>
+Weight Converter
+</h2>
+
+
+
+<select id="weightType">
+
+
+<option value="kg_g">
+Kg ➡ Gram
+</option>
+
+
+<option value="g_kg">
+Gram ➡ Kg
+</option>
+
+
+<option value="kg_lb">
+Kg ➡ Pound
+</option>
+
+
+<option value="lb_kg">
+Pound ➡ Kg
+</option>
+
+
+</select>
+
+
+
+<input 
+id="weightValue"
+type="number"
+placeholder="Enter Weight">
+
+
+
+<button onclick="weightConvert()">
+
+Convert
+
+</button>
+
+
+
+<div class="result" id="weightResult">
+
+Result
+
+</div>
+
+
+</div>
+
+
+<!-- TEMPERATURE -->
+
+<div class="card">
+
+<div class="icon">🌡️</div>
+
+<h2>Temperature</h2>
+
+
+<select id="tempType">
+
+<option value="cf">Celsius ➡ Fahrenheit</option>
+
+<option value="fc">Fahrenheit ➡ Celsius</option>
+
+<option value="ck">Celsius ➡ Kelvin</option>
+
+</select>
+
+
+<input id="tempValue" type="number" placeholder="Enter Temperature">
+
+
+<button onclick="tempConvert()">
+Convert
+</button>
+
+
+<div class="result" id="tempResult">
+Result
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- AREA -->
+
+
+<div class="card">
+
+<div class="icon">⬛</div>
+
+<h2>Area</h2>
+
+
+<select id="areaType">
+
+<option value="sqm">Square Meter ➡ Square Feet</option>
+
+<option value="sqft">Square Feet ➡ Square Meter</option>
+
+<option value="acre">Acre ➡ Square Meter</option>
+
+</select>
+
+
+<input id="areaValue" type="number" placeholder="Enter Area">
+
+
+<button onclick="areaConvert()">
+Convert
+</button>
+
+
+<div class="result" id="areaResult">
+Result
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- VOLUME -->
+
+
+<div class="card">
+
+<div class="icon">🧊</div>
+
+<h2>Volume</h2>
+
+
+<select id="volumeType">
+
+<option value="lm">Liter ➡ ML</option>
+
+<option value="ml">ML ➡ Liter</option>
+
+<option value="m3">Cubic Meter ➡ Liter</option>
+
+</select>
+
+
+<input id="volumeValue" type="number" placeholder="Enter Volume">
+
+
+<button onclick="volumeConvert()">
+Convert
+</button>
+
+
+<div class="result" id="volumeResult">
+Result
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- SPEED -->
+
+
+<div class="card">
+
+<div class="icon">🚗</div>
+
+<h2>Speed</h2>
+
+
+<select id="speedType">
+
+<option value="km">KM/H ➡ MPH</option>
+
+<option value="mph">MPH ➡ KM/H</option>
+
+</select>
+
+
+<input id="speedValue" type="number" placeholder="Enter Speed">
+
+
+<button onclick="speedConvert()">
+Convert
+</button>
+
+
+<div class="result" id="speedResult">
+Result
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- TIME -->
+
+
+<div class="card">
+
+<div class="icon">⏱️</div>
+
+<h2>Time</h2>
+
+
+<select id="timeType">
+
+<option value="sm">Second ➡ Minute</option>
+
+<option value="mh">Minute ➡ Hour</option>
+
+<option value="hd">Hour ➡ Day</option>
+
+</select>
+
+
+<input id="timeValue" type="number" placeholder="Enter Time">
+
+
+<button onclick="timeConvert()">
+Convert
+</button>
+
+
+<div class="result" id="timeResult">
+Result
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<footer class="footer">
+
+<h3>S A D</h3>
+
+<p>
+Smart Academic Dashboard
+</p>
+
+</footer>
+
+
+
+
+
+
+<script>
+
+
+// LENGTH
+
+
+function lengthConvert(){
+
+
+let v=Number(document.getElementById("lengthValue").value);
+
+let t=document.getElementById("lengthType").value;
+
+let r="";
+
+
+
+if(t=="mft")
+r=(v*3.28084).toFixed(2)+" Feet";
+
+
+if(t=="ftm")
+r=(v/3.28084).toFixed(2)+" Meter";
+
+
+if(t=="min")
+r=(v*39.3701).toFixed(2)+" Inch";
+
+
+if(t=="inm")
+r=(v/39.3701).toFixed(2)+" Meter";
+
+
+if(t=="mfi"){
+
+let inch=v*39.3701;
+
+r=Math.floor(inch/12)+" Feet "+(inch%12).toFixed(2)+" Inch";
+
+}
+
+
+if(t=="cm_m")
+r=(v/100).toFixed(3)+" Meter";
+
+
+if(t=="m_cm")
+r=(v*100).toFixed(2)+" CM";
+
+
+if(t=="cm_in")
+r=(v/2.54).toFixed(2)+" Inch";
+
+
+if(t=="in_cm")
+r=(v*2.54).toFixed(2)+" CM";
+
+
+if(t=="mm_cm")
+r=(v/10).toFixed(2)+" CM";
+
+
+if(t=="cm_mm")
+r=(v*10).toFixed(2)+" MM";
+
+
+if(t=="km_m")
+r=(v*1000).toFixed(2)+" Meter";
+
+
+if(t=="m_km")
+r=(v/1000).toFixed(3)+" KM";
+
+
+if(t=="yard_m")
+r=(v*0.9144).toFixed(3)+" Meter";
+
+
+if(t=="m_yard")
+r=(v*1.09361).toFixed(3)+" Yard";
+
+
+if(t=="mile_km")
+r=(v*1.60934).toFixed(3)+" KM";
+
+
+if(t=="km_mile")
+r=(v*0.621371).toFixed(3)+" Mile";
+
+
+document.getElementById("lengthResult").innerHTML=r;
+
+}
+
+
+
+
+
+
+
+// WEIGHT
+
+
+function weightConvert(){
+
+
+let v=Number(weightValue.value);
+
+let r="";
+
+
+if(weightType.value=="kg_g")
+r=v*1000+" Gram";
+
+
+if(weightType.value=="g_kg")
+r=(v/1000).toFixed(3)+" Kg";
+
+
+if(weightType.value=="kg_lb")
+r=(v*2.20462).toFixed(2)+" Pound";
+
+
+if(weightType.value=="lb_kg")
+r=(v/2.20462).toFixed(2)+" Kg";
+
+
+weightResult.innerHTML=r;
+
+}
+
+
+
+
+
+
+
+// TEMPERATURE
+
+
+function tempConvert(){
+
+
+let v=Number(tempValue.value);
+
+let r="";
+
+
+if(tempType.value=="cf")
+r=(v*9/5+32).toFixed(2)+" °F";
+
+
+if(tempType.value=="fc")
+r=((v-32)*5/9).toFixed(2)+" °C";
+
+
+if(tempType.value=="ck")
+r=(v+273.15).toFixed(2)+" K";
+
+
+tempResult.innerHTML=r;
+
+}
+
+
+
+
+
+
+
+// AREA
+
+
+function areaConvert(){
+
+
+let v=Number(areaValue.value);
+
+let r="";
+
+
+if(areaType.value=="sqm")
+r=(v*10.7639).toFixed(2)+" Sq Ft";
+
+
+if(areaType.value=="sqft")
+r=(v/10.7639).toFixed(2)+" Sq Meter";
+
+
+if(areaType.value=="acre")
+r=(v*4046.86).toFixed(2)+" Sq Meter";
+
+
+areaResult.innerHTML=r;
+
+}
+
+
+
+
+
+
+
+// VOLUME
+
+
+function volumeConvert(){
+
+
+let v=Number(volumeValue.value);
+
+let r="";
+
+
+if(volumeType.value=="lm")
+r=v*1000+" ML";
+
+
+if(volumeType.value=="ml")
+r=(v/1000).toFixed(3)+" Liter";
+
+
+if(volumeType.value=="m3")
+r=v*1000+" Liter";
+
+
+volumeResult.innerHTML=r;
+
+}
+
+
+
+
+
+
+
+// SPEED
+
+
+function speedConvert(){
+
+
+let v=Number(speedValue.value);
+
+let r="";
+
+
+if(speedType.value=="km")
+r=(v*0.621371).toFixed(2)+" MPH";
+
+
+if(speedType.value=="mph")
+r=(v/0.621371).toFixed(2)+" KM/H";
+
+
+speedResult.innerHTML=r;
+
+}
+
+
+
+
+
+
+
+// TIME
+
+
+function timeConvert(){
+
+
+let v=Number(timeValue.value);
+
+let r="";
+
+
+if(timeType.value=="sm")
+r=(v/60).toFixed(2)+" Minute";
+
+
+if(timeType.value=="mh")
+r=(v/60).toFixed(2)+" Hour";
+
+
+if(timeType.value=="hd")
+r=(v/24).toFixed(2)+" Day";
+
+
+timeResult.innerHTML=r;
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

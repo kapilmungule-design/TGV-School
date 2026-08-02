@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Academic Stars</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,Arial,sans-serif;
+}
+
+body{
+
+background:linear-gradient(-45deg,#dbeafe,#dcfce7,#fef9c3,#ede9fe);
+background-size:400% 400%;
+animation:bg 10s infinite alternate;
+
+}
+
+@keyframes bg{
+
+0%{background-position:left;}
+100%{background-position:right;}
+
+}
+
+header{
+
+position:sticky;
+top:0;
+z-index:1000;
+
+background:linear-gradient(135deg,#2563eb,#16a34a);
+
+color:white;
+
+text-align:center;
+
+padding:18px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+header h1{
+
+font-size:28px;
+
+}
+
+header p{
+
+font-size:13px;
+
+margin-top:5px;
+
+}
+
+.container{
+
+width:95%;
+max-width:1100px;
+margin:auto;
+padding:20px;
+
+}
+
+.section-title{
+
+font-size:25px;
+margin:25px 0 15px;
+color:#065f46;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:20px;
+
+padding:20px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.photo{
+
+width:90px;
+height:90px;
+
+border-radius:50%;
+
+margin:auto;
+
+background:#ddd;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+font-size:35px;
+
+}
+
+.gold{
+
+border-top:6px solid gold;
+
+}
+
+.silver{
+
+border-top:6px solid silver;
+
+}
+
+.bronze{
+
+border-top:6px solid #cd7f32;
+
+}
+
+.name{
+
+font-size:20px;
+
+margin-top:12px;
+
+font-weight:bold;
+
+}
+
+.info{
+
+color:#555;
+
+margin-top:5px;
+
+font-size:14px;
+
+}
+
+.badge{
+
+display:inline-block;
+
+margin-top:10px;
+
+padding:6px 15px;
+
+border-radius:20px;
+
+background:#16a34a;
+
+color:white;
+
+font-size:12px;
+
+}
+
+.subjects{
+
+background:white;
+
+padding:20px;
+
+border-radius:20px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+margin-top:25px;
+
+}
+
+.subject{
+
+padding:12px;
+
+border-bottom:1px solid #ddd;
+
+display:flex;
+
+justify-content:space-between;
+
+}
+
+.message{
+
+margin-top:25px;
+
+background:linear-gradient(135deg,#2563eb,#16a34a);
+
+color:white;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+footer{
+
+margin-top:30px;
+
+background:#052e16;
+
+color:white;
+
+text-align:center;
+
+padding:15px;
+
+}
+
+footer h3{
+
+letter-spacing:5px;
+
+}
+
+@media(max-width:600px){
+
+header h1{
+
+font-size:22px;
+
+}
+
+.section-title{
+
+font-size:22px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🏆 Academic Stars</h1>
+
+<p>Celebrating Excellence in Education</p>
+
+</header>
+
+<div class="container">
+
+<h2 class="section-title">🥇 Gold Achievers</h2>
+
+<div class="grid">
+
+<div class="card gold">
+
+<div class="photo">👨</div>
+
+<div class="name">Rahul Sharma</div>
+
+<div class="info">Class 10</div>
+
+<div class="info">Percentage : 96.80%</div>
+
+<div class="badge">Gold Medal</div>
+
+</div>
+
+<div class="card gold">
+
+<div class="photo">👩</div>
+
+<div class="name">Sneha Patil</div>
+
+<div class="info">Class 9</div>
+
+<div class="info">Percentage : 95.40%</div>
+
+<div class="badge">Gold Medal</div>
+
+</div>
+
+</div>
+
+<h2 class="section-title">🥈 Silver Achievers</h2>
+
+<div class="grid">
+
+<div class="card silver">
+
+<div class="photo">👨</div>
+
+<div class="name">Aman Verma</div>
+
+<div class="info">Class 10</div>
+
+<div class="info">94.60%</div>
+
+<div class="badge">Silver Medal</div>
+
+</div>
+
+</div>
+
+<h2 class="section-title">🥉 Bronze Achievers</h2>
+
+<div class="grid">
+
+<div class="card bronze">
+
+<div class="photo">👩</div>
+
+<div class="name">Pooja Kale</div>
+
+<div class="info">Class 8</div>
+
+<div class="info">92.20%</div>
+
+<div class="badge">Bronze Medal</div>
+
+</div>
+
+</div>
+
+<div class="subjects">
+
+<h2 style="margin-bottom:15px;color:#166534;">📚 Subject Toppers</h2>
+
+<div class="subject">
+<span>Mathematics</span>
+<b>Rahul Sharma</b>
+</div>
+
+<div class="subject">
+<span>Science</span>
+<b>Sneha Patil</b>
+</div>
+
+<div class="subject">
+<span>English</span>
+<b>Aman Verma</b>
+</div>
+
+<div class="subject">
+<span>Social Science</span>
+<b>Pooja Kale</b>
+</div>
+
+</div>
+
+<div class="message">
+
+<h2>🎓 Principal's Appreciation</h2>
+
+<p style="margin-top:10px;line-height:1.7;">
+
+Success is achieved through hard work, dedication and discipline.
+We congratulate all our Academic Stars and wish them a bright future.
+
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>S A D</h3>
+
+<p>Smart Academic Dashboard</p>
+
+<small>Powered by S-A-D Developer © 2026</small>
+
+</footer>
+
+</body>
+</html>

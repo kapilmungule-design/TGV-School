@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Young Innovators</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(-45deg,#dbeafe,#ede9fe,#dcfce7,#fef3c7);
+background-size:400% 400%;
+animation:bg 12s infinite alternate;
+}
+
+@keyframes bg{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+header{
+position:sticky;
+top:0;
+z-index:999;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:#fff;
+text-align:center;
+padding:18px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+header h1{
+font-size:28px;
+}
+
+header p{
+font-size:13px;
+margin-top:5px;
+}
+
+.container{
+width:95%;
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+.hero{
+background:#fff;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+margin-bottom:25px;
+}
+
+.hero span{
+font-size:60px;
+display:block;
+animation:float 2s infinite;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-10px);
+}
+}
+
+.hero h2{
+margin-top:10px;
+color:#4f46e5;
+}
+
+.hero p{
+margin-top:10px;
+font-size:14px;
+line-height:1.7;
+color:#555;
+}
+
+.title{
+font-size:25px;
+margin:25px 0 15px;
+color:#4f46e5;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+border-top:6px solid #4f46e5;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.photo{
+width:90px;
+height:90px;
+border-radius:50%;
+background:#eef2ff;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:auto;
+font-size:38px;
+}
+
+.name{
+font-size:20px;
+font-weight:bold;
+margin-top:12px;
+}
+
+.info{
+margin-top:5px;
+font-size:14px;
+color:#555;
+}
+
+.badge{
+display:inline-block;
+margin-top:10px;
+padding:6px 15px;
+background:#4f46e5;
+color:#fff;
+border-radius:20px;
+font-size:12px;
+}
+
+.projects{
+margin-top:25px;
+background:#fff;
+padding:20px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.project{
+display:flex;
+justify-content:space-between;
+padding:12px 0;
+border-bottom:1px solid #eee;
+}
+
+.message{
+margin-top:25px;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:#fff;
+padding:25px;
+border-radius:20px;
+text-align:center;
+}
+
+footer{
+margin-top:30px;
+background:#052e16;
+color:#fff;
+text-align:center;
+padding:15px;
+}
+
+footer h3{
+letter-spacing:5px;
+}
+
+footer p{
+font-size:11px;
+margin-top:5px;
+}
+
+@media(max-width:600px){
+
+header h1{
+font-size:22px;
+}
+
+.title{
+font-size:22px;
+}
+
+.project{
+flex-direction:column;
+gap:5px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>💡 Young Innovators</h1>
+
+<p>Innovation • Science • Technology • Future Leaders</p>
+
+</header>
+
+<div class="container">
+
+<div class="hero">
+
+<span>💡</span>
+
+<h2>Ideas That Change the World</h2>
+
+<p>
+
+Innovation begins with curiosity. Our Young Innovators create science models, technology projects and creative solutions that inspire everyone to think differently.
+
+</p>
+
+</div>
+
+<h2 class="title">🌟 Featured Innovators</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="photo">🔬</div>
+
+<div class="name">Rahul Sharma</div>
+
+<div class="info">Science Model Winner</div>
+
+<div class="info">Class 10</div>
+
+<div class="badge">Innovation Award</div>
+
+</div>
+
+<div class="card">
+
+<div class="photo">🤖</div>
+
+<div class="name">Sneha Patil</div>
+
+<div class="info">Robotics Project</div>
+
+<div class="info">Class 9</div>
+
+<div class="badge">Tech Creator</div>
+
+</div>
+
+<div class="card">
+
+<div class="photo">💻</div>
+
+<div class="name">Aman Verma</div>
+
+<div class="info">Coding Challenge</div>
+
+<div class="info">Class 8</div>
+
+<div class="badge">Future Innovator</div>
+
+</div>
+
+</div>
+
+<div class="projects">
+
+<h2 style="color:#4f46e5;margin-bottom:15px;">🚀 Innovation Highlights</h2>
+
+<div class="project">
+<span>🔬 Science Exhibition</span>
+<b>1st Prize</b>
+</div>
+
+<div class="project">
+<span>🤖 Robotics Challenge</span>
+<b>Gold Award</b>
+</div>
+
+<div class="project">
+<span>💻 Coding Competition</span>
+<b>State Level</b>
+</div>
+
+<div class="project">
+<span>🌱 Eco Innovation Project</span>
+<b>Best Idea</b>
+</div>
+
+<div class="project">
+<span>⚡ Smart Energy Model</span>
+<b>Innovation Excellence</b>
+</div>
+
+</div>
+
+<div class="message">
+
+<h2>💬 Innovation Message</h2>
+
+<p style="margin-top:10px;line-height:1.7;">
+
+Every great invention starts with a simple idea. Keep asking questions, keep experimenting and never stop creating. Today's young innovators are tomorrow's leaders.
+
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>S A D</h3>
+
+<p>Smart Academic Dashboard</p>
+
+<small>Powered by S-A-D Developer © 2026</small>
+
+</footer>
+
+</body>
+</html>

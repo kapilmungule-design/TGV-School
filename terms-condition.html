@@ -1,22 +1,650 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
 
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>
-Terms & Conditions
+Terms & Conditions | Tukadoji Gramin Vidyalaya
 </title>
 
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:"Segoe UI",Arial,sans-serif;
+
+min-height:100vh;
+
+background:
+linear-gradient(
+120deg,
+#dcfce7,
+#dbeafe,
+#fef3c7,
+#ede9fe
+);
+
+background-size:400% 400%;
+
+animation:bgMove 15s infinite alternate;
+
+padding-bottom:50px;
+
+overflow-x:hidden;
+
+}
+
+
+
+@keyframes bgMove{
+
+0%{
+background-position:left;
+}
+
+100%{
+background-position:right;
+}
+
+}
+
+
+
+/* Floating Animation */
+
+
+.circle{
+
+position:fixed;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:white;
+
+opacity:.25;
+
+z-index:-1;
+
+animation:float 8s infinite;
+
+}
+
+
+.circle.one{
+
+top:15%;
+
+left:5%;
+
+}
+
+
+
+.circle.two{
+
+bottom:15%;
+
+right:5%;
+
+animation-delay:3s;
+
+}
+
+
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-50px) rotate(180deg);
+
+}
+
+}
+
+
+
+
+
+
+/* Premium Header */
+
+
+.header{
+
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+
+background:
+
+linear-gradient(
+135deg,
+#065f46,
+#16a34a,
+#2563eb
+);
+
+
+background-size:200% 200%;
+
+
+animation:headerColor 6s infinite alternate;
+
+
+color:white;
+
+text-align:center;
+
+
+padding:18px 12px;
+
+
+border-radius:0 0 30px 30px;
+
+
+box-shadow:
+
+0 8px 20px rgba(0,0,0,.2);
+
+
+}
+
+
+
+@keyframes headerColor{
+
+
+0%{
+
+background-position:left;
+
+}
+
+
+100%{
+
+background-position:right;
+
+}
+
+
+}
+
+
+
+.header h1{
+
+
+font-size:26px;
+
+font-weight:700;
+
+
+letter-spacing:.5px;
+
+
+text-shadow:
+
+0 2px 5px rgba(0,0,0,.3);
+
+
+}
+
+
+
+.header p{
+
+
+font-size:12px;
+
+margin-top:6px;
+
+opacity:.95;
+
+}
+
+
+
+
+
+.header::after{
+
+
+content:"";
+
+
+display:block;
+
+
+width:70px;
+
+height:3px;
+
+
+background:white;
+
+
+border-radius:20px;
+
+
+margin:10px auto 0;
+
+
+animation:line 2s infinite;
+
+
+}
+
+
+
+@keyframes line{
+
+
+50%{
+
+width:130px;
+
+}
+
+}
+
+
+
+
+
+
+/* Main */
+
+
+.container{
+
+
+max-width:950px;
+
+margin:auto;
+
+padding:15px;
+
+
+}
+
+
+
+
+
+.card{
+
+
+background:rgba(255,255,255,.85);
+
+
+backdrop-filter:blur(15px);
+
+
+padding:25px;
+
+
+border-radius:30px;
+
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.12);
+
+
+animation:cardShow .8s;
+
+
+}
+
+
+
+@keyframes cardShow{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+
+.section{
+
+
+margin-top:22px;
+
+
+padding:15px;
+
+
+border-radius:18px;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.section:hover{
+
+
+background:#ffffff80;
+
+transform:translateX(8px);
+
+
+}
+
+
+
+
+
+.intro{
+
+
+background:
+
+linear-gradient(
+135deg,
+#eff6ff,
+#ecfdf5
+);
+
+
+border-left:5px solid #2563eb;
+
+
+}
+
+
+
+
+
+h2{
+
+
+font-size:19px;
+
+color:#166534;
+
+margin-bottom:8px;
+
+
+}
+
+
+
+p,li{
+
+
+font-size:14px;
+
+color:#475569;
+
+line-height:1.7;
+
+
+}
+
+
+
+ul{
+
+margin-left:20px;
+
+}
+
+
+
+
+
+
+.info{
+
+
+margin-top:25px;
+
+
+padding:18px;
+
+
+background:#f0fdf4;
+
+
+border-radius:18px;
+
+
+border-left:5px solid #16a34a;
+
+
+animation:info 4s infinite;
+
+
+}
+
+
+
+@keyframes info{
+
+
+50%{
+
+transform:scale(1.02);
+
+}
+
+
+}
+
+
+
+
+
+
+/* Footer */
+
+
+.footer{
+
+
+margin-top:25px;
+
+
+background:
+
+linear-gradient(
+135deg,
+#052e16,
+#166534
+);
+
+
+color:white;
+
+
+text-align:center;
+
+
+padding:12px;
+
+
+border-radius:25px 25px 0 0;
+
+
+}
+
+
+
+.footer h3{
+
+
+font-size:20px;
+
+letter-spacing:5px;
+
+}
+
+
+
+.footer p{
+
+
+color:white;
+
+font-size:11px;
+
+margin:3px;
+
+}
+
+
+
+.footer small{
+
+
+font-size:9px;
+
+opacity:.8;
+
+
+}
+
+
+
+
+
+
+/* Mobile */
+
+
+@media(max-width:600px){
+
+
+.header{
+
+padding:15px 8px;
+
+}
+
+
+.header h1{
+
+font-size:21px;
+
+}
+
+
+.header p{
+
+font-size:11px;
+
+}
+
+
+
+.container{
+
+padding:10px;
+
+}
+
+
+
+.card{
+
+padding:18px;
+
+border-radius:22px;
+
+}
+
+
+
+h2{
+
+font-size:17px;
+
+}
+
+
+
+p,li{
+
+font-size:13px;
+
+}
+
+
+
+.section:hover{
+
+transform:none;
+
+}
+
+
+}
+
+
+
+</style>
 
 </head>
+
 
 
 <body>
 
 
-<div class="policyBox">
+
+<div class="circle one"></div>
+
+<div class="circle two"></div>
+
+
+
+
+
+<header class="header">
 
 
 <h1>
@@ -24,59 +652,290 @@ Terms & Conditions
 </h1>
 
 
-
 <p>
-
-By using ABC International School website,
-you agree to follow these terms and conditions.
-
+Smart Academic Dashboard | Digital Education Rules
 </p>
 
 
+</header>
+
+
+
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+
+
+
+
+<div class="section intro">
+
 
 <h2>
-Website Usage
+🏫 Introduction
 </h2>
 
 
 <p>
 
-The website content is provided for educational
-and informational purposes only.
+By using Tukadoji Gramin Vidyalaya website and digital services, you agree to follow these Terms & Conditions.
+
+This platform is developed in collaboration with <b>S-A-D Developer</b> to provide a safe and smart educational environment.
 
 </p>
 
 
+</div>
+
+
+
+
+
+
+<div class="section">
+
 
 <h2>
-Student Services
+🌐 Website Usage
 </h2>
 
 
 <p>
 
-Students should use online services responsibly
-and provide correct information.
+The website is created for educational information, school updates, announcements and student services.
+
+Users should not misuse the website or attempt unauthorized access.
 
 </p>
 
 
+</div>
+
+
+
+
+
+
+<div class="section">
+
 
 <h2>
-Changes
+👨‍🎓 Student Services
 </h2>
 
 
 <p>
 
-School management may update website features
-and policies when required.
+Students and parents must provide correct information and use digital services responsibly for educational purposes.
 
 </p>
+
+
+</div>
+
+
+
+
+
+
+<div class="section">
+
+
+<h2>
+📱 Mobile Application Guidelines
+</h2>
+
+
+<p>
+
+Our application follows Google Play safety guidelines and provides secure educational features.
+
+Only required permissions are used for app functionality.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="section">
+
+
+<h2>
+🔐 User Responsibility
+</h2>
+
+
+<ul>
+
+<li>Protect personal account information</li>
+
+<li>Provide accurate details</li>
+
+<li>Follow school rules</li>
+
+<li>Respect digital resources</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div class="section">
+
+
+<h2>
+📝 Copyright & Content
+</h2>
+
+
+<p>
+
+All website content, designs, logos and educational materials belong to Tukadoji Gramin Vidyalaya and authorized partners.
+
+Unauthorized copying is prohibited.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="section">
+
+
+<h2>
+🔄 Changes To Services
+</h2>
+
+
+<p>
+
+School management may update website features, services and policies whenever required for improvement and security.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="section">
+
+
+<h2>
+📩 Contact
+</h2>
+
+
+<p>
+
+For any questions regarding these Terms & Conditions, contact school administration.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="info">
+
+
+<b>
+🏫 Organization
+</b>
+
+<br>
+
+Tukadoji Gramin Vidyalaya
+
+
+<br><br>
+
+
+<b>
+Technology Partner
+</b>
+
+<br>
+
+S-A-D Developer
+
+
+<br><br>
+
+
+<b>
+Platform
+</b>
+
+<br>
+
+Smart Academic Dashboard
+
+
+</div>
+
+
+
+
+
+
+
+<footer class="footer">
+
+
+<h3>
+S A D
+</h3>
+
+
+<p>
+Smart Academic Dashboard
+</p>
+
+
+<small>
+Powered by S-A-D Developer © 2026
+</small>
+
+
+</footer>
+
+
 
 
 
 </div>
+
+</div>
+
 
 
 </body>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Plant Trees | Save Trees</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:Poppins,sans-serif;
+
+min-height:100vh;
+
+background:
+linear-gradient(
+120deg,
+#dcfce7,
+#bbf7d0,
+#86efac,
+#ecfccb
+);
+
+background-size:400% 400%;
+
+animation:bg 15s infinite alternate;
+
+color:#14532d;
+
+overflow-x:hidden;
+
+}
+
+
+
+@keyframes bg{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+100%{
+
+background-position:100% 50%;
+
+}
+
+}
+
+
+
+/* Floating Leaves */
+
+
+.leaf{
+
+position:fixed;
+
+font-size:30px;
+
+opacity:.3;
+
+animation:fall 12s infinite linear;
+
+z-index:-1;
+
+}
+
+
+
+.leaf1{
+
+left:10%;
+
+animation-delay:2s;
+
+}
+
+
+.leaf2{
+
+left:70%;
+
+animation-delay:5s;
+
+}
+
+
+
+.leaf3{
+
+left:40%;
+
+animation-delay:8s;
+
+}
+
+
+
+
+@keyframes fall{
+
+from{
+
+top:-10%;
+
+transform:rotate(0);
+
+}
+
+
+to{
+
+top:110%;
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+
+
+
+
+/* Header */
+
+
+.header{
+
+background:
+
+linear-gradient(
+135deg,
+#14532d,
+#22c55e
+);
+
+
+color:white;
+
+text-align:center;
+
+padding:30px 15px;
+
+border-radius:0 0 40px 40px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+animation:top .8s;
+
+}
+
+
+
+.header h1{
+
+font-size:32px;
+
+}
+
+
+
+.header p{
+
+font-size:14px;
+
+opacity:.9;
+
+}
+
+
+
+
+
+@keyframes top{
+
+from{
+
+opacity:0;
+
+transform:translateY(-40px);
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+
+.container{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:18px;
+
+}
+
+
+
+
+
+/* Hero */
+
+
+.hero{
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(12px);
+
+border-radius:30px;
+
+padding:30px;
+
+text-align:center;
+
+margin-top:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+animation:show 1s;
+
+}
+
+
+
+
+.tree{
+
+font-size:80px;
+
+animation:tree 3s infinite;
+
+}
+
+
+
+@keyframes tree{
+
+50%{
+
+transform:translateY(-12px) scale(1.05);
+
+}
+
+}
+
+
+
+
+
+.hero h2{
+
+font-size:30px;
+
+color:#166534;
+
+}
+
+
+.hero p{
+
+margin-top:10px;
+
+font-size:14px;
+
+line-height:1.7;
+
+color:#475569;
+
+}
+
+
+
+
+
+/* Cards */
+
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px;
+
+margin-top:25px;
+
+}
+
+
+
+.card{
+
+
+background:rgba(255,255,255,.9);
+
+border-radius:25px;
+
+padding:25px 18px;
+
+text-align:center;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+transition:.5s;
+
+animation:card .8s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+.card span{
+
+font-size:50px;
+
+}
+
+
+
+.card h3{
+
+margin-top:10px;
+
+color:#166534;
+
+}
+
+
+.card p{
+
+font-size:13px;
+
+color:#64748b;
+
+margin-top:8px;
+
+line-height:1.5;
+
+}
+
+
+
+@keyframes card{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+
+
+/* Message */
+
+
+.message{
+
+
+margin-top:25px;
+
+background:
+
+linear-gradient(
+135deg,
+#166534,
+#22c55e
+);
+
+
+color:white;
+
+padding:25px;
+
+border-radius:30px;
+
+text-align:center;
+
+animation:pulseBox 4s infinite;
+
+}
+
+
+
+@keyframes pulseBox{
+
+50%{
+
+transform:scale(1.02);
+
+}
+
+}
+
+
+
+.message h2{
+
+font-size:25px;
+
+}
+
+
+
+.message p{
+
+font-size:13px;
+
+line-height:1.6;
+
+margin-top:8px;
+
+}
+
+
+
+
+
+
+/* Footer */
+
+
+.footer{
+
+margin-top:25px;
+
+background:#052e16;
+
+color:white;
+
+text-align:center;
+
+padding:10px;
+
+border-radius:20px 20px 0 0;
+
+}
+
+
+
+.footer h3{
+
+font-size:16px;
+
+letter-spacing:2px;
+
+}
+
+
+
+.footer p{
+
+font-size:10px;
+
+opacity:.8;
+
+}
+
+
+
+
+
+
+
+@media(max-width:900px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+.header h1{
+
+font-size:24px;
+
+}
+
+
+
+.hero{
+
+padding:20px;
+
+}
+
+
+
+.tree{
+
+font-size:60px;
+
+}
+
+
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.container{
+
+padding:10px;
+
+}
+
+
+.card{
+
+padding:20px;
+
+}
+
+
+
+.message{
+
+padding:20px;
+
+}
+
+
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="leaf leaf1">🍃</div>
+<div class="leaf leaf2">🌿</div>
+<div class="leaf leaf3">🍃</div>
+
+
+
+<div class="header">
+
+<h1>
+🌱 Plant Trees Save Trees
+</h1>
+
+<p>
+Protect Nature | Protect Future
+</p>
+
+</div>
+
+
+
+
+<div class="container">
+
+
+<div class="hero">
+
+
+<div class="tree">
+🌳
+</div>
+
+
+<h2>
+Every Tree Matters
+</h2>
+
+
+<p>
+
+Trees are the lungs of our planet. They provide oxygen, reduce pollution and create a healthier environment. Plant trees today for a greener tomorrow.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<span>🌱</span>
+
+<h3>
+Plant More Trees
+</h3>
+
+<p>
+Every planted tree is a step towards a cleaner and greener Earth.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<span>💧</span>
+
+<h3>
+Save Water
+</h3>
+
+<p>
+Protect water resources and support natural ecosystems.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<span>🌍</span>
+
+<h3>
+Save Earth
+</h3>
+
+<p>
+Small environmental actions create big changes.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="message">
+
+<h2>
+🌳 One Tree, One Life
+</h2>
+
+
+<p>
+
+Plant a tree, spread awareness and become a guardian of nature. Together we can make Earth greener and safer.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<footer class="footer">
+
+
+<h3>
+Tukadoji Gramin Vidyalaya
+</h3>
+
+
+<p>
+S-A-D | Smart Academic Dashboard
+</p>
+
+
+</footer>
+
+
+
+</body>
+
+</html>

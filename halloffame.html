@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Hall of Fame | Tukadoji Gramin Vidyalaya
+</title>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:"Segoe UI",Arial,sans-serif;
+
+background:
+linear-gradient(
+120deg,
+#fef3c7,
+#dbeafe,
+#dcfce7,
+#ede9fe
+);
+
+background-size:400% 400%;
+
+animation:bg 15s infinite alternate;
+
+padding-bottom:60px;
+
+}
+
+
+
+@keyframes bg{
+
+
+0%{
+background-position:left;
+}
+
+
+100%{
+background-position:right;
+}
+
+
+}
+
+
+
+
+
+
+/* Header */
+
+
+.header{
+
+
+background:
+
+linear-gradient(
+135deg,
+#92400e,
+#f59e0b,
+#2563eb
+);
+
+
+color:white;
+
+
+text-align:center;
+
+
+padding:22px 10px;
+
+
+border-radius:0 0 35px 35px;
+
+
+position:sticky;
+
+top:0;
+
+z-index:10;
+
+
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+
+animation:head .8s;
+
+
+}
+
+
+.header h1{
+
+font-size:28px;
+
+}
+
+
+.header p{
+
+font-size:12px;
+
+margin-top:5px;
+
+}
+
+
+
+
+@keyframes head{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(-30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+
+
+.container{
+
+
+max-width:1100px;
+
+margin:auto;
+
+padding:15px;
+
+}
+
+
+
+
+
+
+.intro{
+
+
+background:white;
+
+
+padding:20px;
+
+
+border-radius:25px;
+
+
+text-align:center;
+
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+
+animation:show .8s;
+
+
+}
+
+
+
+.intro span{
+
+font-size:55px;
+
+
+animation:trophy 2s infinite;
+
+
+}
+
+
+
+@keyframes trophy{
+
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+
+}
+
+
+
+
+
+.intro h2{
+
+color:#92400e;
+
+margin-top:10px;
+
+}
+
+
+.intro p{
+
+font-size:14px;
+
+color:#64748b;
+
+line-height:1.6;
+
+}
+
+
+
+
+@keyframes show{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+
+
+
+.grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+margin-top:25px;
+
+
+}
+
+
+
+
+
+
+.card{
+
+
+background:white;
+
+
+padding:22px;
+
+
+border-radius:25px;
+
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+
+transition:.4s;
+
+
+border-top:5px solid #f59e0b;
+
+
+}
+
+
+
+.card:hover{
+
+
+transform:translateY(-8px);
+
+
+}
+
+
+
+
+.card .icon{
+
+
+font-size:45px;
+
+
+}
+
+
+
+.card h3{
+
+
+color:#92400e;
+
+margin-top:10px;
+
+
+}
+
+
+
+.card p{
+
+
+font-size:13px;
+
+color:#64748b;
+
+line-height:1.6;
+
+
+}
+
+
+
+
+
+
+.badge{
+
+
+display:inline-block;
+
+
+margin-top:12px;
+
+
+padding:6px 15px;
+
+
+border-radius:20px;
+
+
+background:#fef3c7;
+
+
+color:#92400e;
+
+
+font-size:12px;
+
+
+}
+
+
+
+
+
+
+
+.footer{
+
+
+margin-top:25px;
+
+
+background:#052e16;
+
+
+color:white;
+
+
+text-align:center;
+
+
+padding:12px;
+
+
+border-radius:25px 25px 0 0;
+
+
+}
+
+
+.footer h3{
+
+
+letter-spacing:5px;
+
+font-size:20px;
+
+}
+
+
+.footer p{
+
+color:white;
+
+font-size:11px;
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.header h1{
+
+font-size:22px;
+
+}
+
+
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.container{
+
+padding:10px;
+
+}
+
+
+
+.card{
+
+padding:18px;
+
+}
+
+
+}
+
+
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+<header class="header">
+
+
+<h1>
+🏆 Hall of Fame
+</h1>
+
+
+<p>
+Celebrating Excellence & Achievements
+</p>
+
+
+</header>
+
+
+
+
+
+
+
+
+<div class="container">
+
+
+
+
+
+<div class="intro">
+
+
+<span>
+🏆
+</span>
+
+
+<h2>
+Our Pride Stars
+</h2>
+
+
+<p>
+
+Recognizing students who inspire others through academic excellence, creativity, sports and innovation.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+
+<a href="academicstars.html" class="card">
+
+<div class="icon">
+📚
+</div>
+
+<h3>
+Academic Stars
+</h3>
+
+<p>
+Students who achieved outstanding results and excellence in academics.
+</p>
+
+<div class="badge">
+Top Achievers
+</div>
+
+</a>
+
+
+
+
+
+
+
+<a href="sportslegends.html" class="card">
+
+<div class="icon">
+⚽
+</div>
+
+<h3>
+Sports Legends
+</h3>
+
+<p>
+Students who represented school and achieved success in sports activities.
+</p>
+
+<div class="badge">
+Sports Excellence
+</div>
+
+</a>
+
+
+
+
+
+
+<a href="creativeminds.html" class="card">
+
+<div class="icon">
+🎨
+</div>
+
+<h3>
+Creative Minds
+</h3>
+
+<p>
+Students showing creativity through art, cultural activities and projects.
+</p>
+
+<div class="badge">
+Creative Talent
+</div>
+
+</a>
+
+
+
+
+
+
+
+<a href="younginnovators.html" class="card">
+
+<div class="icon">
+💡
+</div>
+
+<h3>
+Young Innovators
+</h3>
+
+<p>
+Students creating innovative ideas, science projects and new solutions.
+</p>
+
+<div class="badge">
+Future Leaders
+</div>
+
+</a>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<footer class="footer">
+
+
+<h3>
+S A D
+</h3>
+
+
+<p>
+Smart Academic Dashboard
+</p>
+
+
+<small>
+Powered by S-A-D Developer © 2026
+</small>
+
+
+</footer>
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+
+</html>
