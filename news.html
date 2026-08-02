@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>School News</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:Poppins,sans-serif;
+
+min-height:100vh;
+
+background:linear-gradient(
+120deg,
+#dbeafe,
+#fef3c7,
+#dcfce7,
+#fce7f3
+);
+
+background-size:400% 400%;
+
+animation:bgMove 12s infinite alternate;
+
+padding-bottom:30px;
+
+}
+
+
+
+@keyframes bgMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+100%{
+
+background-position:100% 50%;
+
+}
+
+}
+
+
+
+/* Fixed Header */
+
+.header{
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+
+background:linear-gradient(135deg,#2563eb,#1e40af);
+
+color:white;
+
+padding:18px 15px;
+
+text-align:center;
+
+border-radius:0 0 25px 25px;
+
+
+}
+
+
+.header h1{
+
+font-size:24px;
+
+}
+
+
+.header p{
+
+font-size:12px;
+
+}
+
+
+
+
+.container{
+
+max-width:700px;
+
+margin:auto;
+
+padding:12px;
+
+}
+
+
+
+
+.title-box{
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(10px);
+
+padding:14px;
+
+border-radius:18px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.title-box h2{
+
+font-size:20px;
+
+color:#1e40af;
+
+}
+
+
+
+.title-box p{
+
+font-size:12px;
+
+color:#64748b;
+
+}
+
+
+
+
+
+
+/* News Card */
+
+
+.news-card{
+
+background:white;
+
+border-radius:22px;
+
+overflow:hidden;
+
+margin-bottom:18px;
+
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+animation:cardShow .6s ease;
+
+}
+
+
+
+
+@keyframes cardShow{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+.news-image{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+
+
+.news-card:hover .news-image{
+
+transform:scale(1.05);
+
+}
+
+
+
+.news-content{
+
+padding:15px;
+
+}
+
+
+
+
+
+.badges{
+
+display:flex;
+
+gap:8px;
+
+}
+
+
+
+
+.category{
+
+background:#dbeafe;
+
+color:#2563eb;
+
+font-size:10px;
+
+padding:5px 12px;
+
+border-radius:20px;
+
+}
+
+
+
+.new{
+
+background:#16a34a;
+
+color:white;
+
+font-size:10px;
+
+padding:5px 10px;
+
+border-radius:20px;
+
+animation:newPulse 1.5s infinite;
+
+}
+
+
+
+@keyframes newPulse{
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+
+
+
+
+.news-content h3{
+
+font-size:17px;
+
+margin-top:10px;
+
+color:#111827;
+
+}
+
+
+
+.news-content p{
+
+font-size:13px;
+
+color:#64748b;
+
+line-height:1.6;
+
+margin-top:8px;
+
+}
+
+
+
+.date{
+
+display:block;
+
+margin-top:10px;
+
+font-size:11px;
+
+color:#94a3b8;
+
+}
+
+
+
+
+
+@media(max-width:500px){
+
+
+.header h1{
+
+font-size:21px;
+
+}
+
+
+.news-image{
+
+height:170px;
+
+}
+
+
+.news-content h3{
+
+font-size:15px;
+
+}
+
+
+.news-content p{
+
+font-size:12px;
+
+}
+
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="header">
+
+<h1>
+📰 School News
+</h1>
+
+<p>
+Latest Updates & Achievements
+</p>
+
+</div>
+
+
+
+<div class="container">
+
+
+
+<div class="title-box">
+
+<h2>
+Latest News
+</h2>
+
+<p>
+Stay connected with school activities
+</p>
+
+</div>
+
+
+
+
+<div class="news-card">
+
+
+<img src="images/news1.jpg" class="news-image">
+
+
+<div class="news-content">
+
+
+<div class="badges">
+
+<span class="category">
+🏆 Achievement
+</span>
+
+
+<span class="new">
+NEW
+</span>
+
+
+</div>
+
+
+
+<h3>
+Students Won District Competition
+</h3>
+
+
+
+<p>
+
+Our students achieved first position in district science competition. School congratulates all students for their dedication and excellent performance.
+
+</p>
+
+
+
+<span class="date">
+📅 02 August 2026
+</span>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="news-card">
+
+
+<img src="images/news2.jpg" class="news-image">
+
+
+<div class="news-content">
+
+
+<div class="badges">
+
+<span class="category">
+🎉 Event
+</span>
+
+
+</div>
+
+
+
+<h3>
+Annual Function 2026
+</h3>
+
+
+
+<p>
+
+Annual cultural program was successfully organized with students, teachers and parents participating actively.
+
+</p>
+
+
+<span class="date">
+📅 25 July 2026
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- Slim Footer Start -->
+
+<footer class="sad-footer">
+
+<h3>S A D</h3>
+
+<p>
+Smart Academic Dashboard
+</p>
+
+<span>
+© 2026 S A D | All Rights Reserved
+</span>
+
+</footer>
+
+
+<style>
+
+
+.sad-footer{
+
+margin-top:20px;
+
+background:linear-gradient(135deg,#1e40af,#2563eb);
+
+color:white;
+
+text-align:center;
+
+padding:10px 8px;
+
+border-radius:18px 18px 0 0;
+
+}
+
+
+
+.sad-footer h3{
+
+font-size:18px;
+
+letter-spacing:4px;
+
+margin:0;
+
+}
+
+
+
+.sad-footer p{
+
+font-size:10px;
+
+margin:2px 0;
+
+opacity:.9;
+
+}
+
+
+
+.sad-footer span{
+
+font-size:9px;
+
+opacity:.8;
+
+}
+
+
+
+@media(max-width:500px){
+
+
+.sad-footer{
+
+padding:9px 5px;
+
+}
+
+
+.sad-footer h3{
+
+font-size:17px;
+
+}
+
+
+.sad-footer p{
+
+font-size:9px;
+
+}
+
+
+.sad-footer span{
+
+font-size:8px;
+
+}
+
+
+}
+
+
+
+</style>
+
+<!-- Slim Footer End -->
+
+</body>
+
+</html>

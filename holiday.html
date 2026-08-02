@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Holiday List</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+background:#f8fafc;
+color:#1e293b;
+padding-top:90px;
+
+}
+
+
+
+/* Stable Header */
+
+.header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+background:linear-gradient(135deg,#2563eb,#1e40af);
+
+color:white;
+
+padding:15px;
+
+text-align:center;
+
+z-index:1000;
+
+box-shadow:0 4px 15px rgba(0,0,0,.2);
+
+}
+
+
+
+.header h1{
+
+font-size:22px;
+
+}
+
+
+
+.header p{
+
+font-size:12px;
+
+}
+
+
+
+/* Container */
+
+.container{
+
+max-width:600px;
+margin:auto;
+padding:15px;
+
+}
+
+
+
+/* Section */
+
+.title{
+
+font-size:18px;
+
+margin:15px 0;
+
+color:#1e40af;
+
+}
+
+
+
+/* Upcoming */
+
+
+.upcoming{
+
+background:white;
+
+border-radius:16px;
+
+padding:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+margin-bottom:12px;
+
+}
+
+
+
+.card{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+padding:10px;
+
+border-bottom:1px solid #eee;
+
+}
+
+
+
+.card:last-child{
+
+border:none;
+
+}
+
+
+
+.date{
+
+background:#2563eb;
+
+color:white;
+
+border-radius:12px;
+
+padding:8px;
+
+text-align:center;
+
+min-width:60px;
+
+}
+
+
+.date b{
+
+font-size:20px;
+
+display:block;
+
+}
+
+
+.date span{
+
+font-size:11px;
+
+}
+
+
+.detail h3{
+
+font-size:14px;
+
+}
+
+
+.detail p{
+
+font-size:12px;
+
+color:#64748b;
+
+}
+
+
+.badge{
+
+background:#16a34a;
+
+color:white;
+
+font-size:10px;
+
+padding:3px 8px;
+
+border-radius:20px;
+
+}
+
+
+
+/* Dropdown */
+
+
+details{
+
+background:white;
+
+border-radius:15px;
+
+margin-bottom:10px;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+overflow:hidden;
+
+}
+
+
+summary{
+
+padding:14px;
+
+font-weight:600;
+
+cursor:pointer;
+
+color:#1e40af;
+
+}
+
+
+
+.more{
+
+padding:0 12px 12px;
+
+}
+
+
+.more .card{
+
+border-bottom:1px solid #eee;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:400px){
+
+.header h1{
+
+font-size:20px;
+
+}
+
+.container{
+
+padding:12px;
+
+}
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="header">
+
+<h1>🎉 Holiday List 2026</h1>
+
+<p>Tukadoji Gramin Vidyalaya</p>
+
+</div>
+
+
+
+
+<div class="container">
+
+
+
+<h2 class="title">
+
+🚀 Upcoming Holidays
+
+</h2>
+
+
+
+<div class="upcoming">
+
+
+
+<div class="card">
+
+<div class="date">
+
+<b>15</b>
+
+<span>AUG</span>
+
+</div>
+
+
+<div class="detail">
+
+<h3>
+Independence Day 
+<span class="badge">Next</span>
+</h3>
+
+<p>Saturday • National Holiday</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="date">
+
+<b>02</b>
+
+<span>OCT</span>
+
+</div>
+
+
+<div class="detail">
+
+<h3>Gandhi Jayanti</h3>
+
+<p>Friday • Public Holiday</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="date">
+
+<b>25</b>
+
+<span>DEC</span>
+
+</div>
+
+
+<div class="detail">
+
+<h3>Christmas Day</h3>
+
+<p>Friday • Festival Holiday</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<h2 class="title">
+
+📅 All Holidays
+
+</h2>
+
+
+
+
+<details>
+
+<summary>
+View Complete Holiday Details ▼
+</summary>
+
+
+<div class="more">
+
+
+<div class="card">
+
+<div class="date">
+<b>26</b>
+<span>JAN</span>
+</div>
+
+<div class="detail">
+<h3>Republic Day</h3>
+<p>Monday • National Holiday</p>
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="date">
+<b>19</b>
+<span>FEB</span>
+</div>
+
+<div class="detail">
+<h3>Shivaji Maharaj Jayanti</h3>
+<p>Thursday • State Holiday</p>
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="date">
+<b>04</b>
+<span>MAR</span>
+</div>
+
+<div class="detail">
+<h3>Holi</h3>
+<p>Wednesday • Festival Holiday</p>
+</div>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="date">
+<b>14</b>
+<span>APR</span>
+</div>
+
+<div class="detail">
+<h3>Ambedkar Jayanti</h3>
+<p>Tuesday • Public Holiday</p>
+</div>
+
+</div>
+
+
+
+
+<div class="card">
+
+<div class="date">
+<b>01</b>
+<span>MAY</span>
+</div>
+
+<div class="detail">
+<h3>Maharashtra Day</h3>
+<p>Friday • State Holiday</p>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</details>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

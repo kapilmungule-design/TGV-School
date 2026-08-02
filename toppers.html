@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>School Toppers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+font-family:Poppins,sans-serif;
+
+background:#eef2ff;
+
+transition:.5s;
+
+padding-bottom:40px;
+
+}
+
+
+
+/* Header */
+
+.header{
+
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+color:white;
+
+padding:25px 15px 45px;
+
+text-align:center;
+
+border-radius:0 0 35px 35px;
+
+}
+
+
+.header h1{
+
+font-size:26px;
+
+}
+
+
+.header p{
+
+font-size:13px;
+
+}
+
+
+
+/* Sticky Class Menu */
+
+
+.class-box{
+
+background:white;
+
+position:sticky;
+
+top:10px;
+
+z-index:1000;
+
+margin:-20px 15px 15px;
+
+padding:15px;
+
+border-radius:22px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+.class-box h2{
+
+text-align:center;
+
+font-size:18px;
+
+color:#1e40af;
+
+margin-bottom:15px;
+
+}
+
+
+
+.tabs{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:10px;
+
+}
+
+
+
+.tabs button{
+
+border:none;
+
+padding:11px;
+
+border-radius:20px;
+
+font-family:Poppins;
+
+font-weight:600;
+
+background:#e2e8f0;
+
+color:#334155;
+
+cursor:pointer;
+
+}
+
+
+
+.tabs button.active{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+
+
+
+/* Content */
+
+
+.container{
+
+max-width:700px;
+
+margin:auto;
+
+padding:15px;
+
+}
+
+
+
+.title{
+
+font-size:22px;
+
+color:white;
+
+background:#2563eb;
+
+padding:12px;
+
+border-radius:15px;
+
+text-align:center;
+
+margin-bottom:15px;
+
+}
+
+
+
+/* Grid */
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:12px;
+
+animation:fade .5s;
+
+}
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+/* Card */
+
+
+.card{
+
+background:white;
+
+border-radius:22px;
+
+padding:12px;
+
+text-align:center;
+
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+
+animation:card .5s;
+
+}
+
+
+@keyframes card{
+
+from{
+
+transform:scale(.9);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+
+.rank{
+
+font-size:28px;
+
+}
+
+
+
+.photo{
+
+width:80px;
+
+height:80px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:4px solid #2563eb;
+
+}
+
+
+
+.name{
+
+font-size:15px;
+
+margin-top:8px;
+
+font-weight:600;
+
+}
+
+
+
+.class{
+
+font-size:12px;
+
+color:#64748b;
+
+}
+
+
+
+.score{
+
+height:60px;
+
+width:60px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#2563eb,#1e40af);
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin:10px auto;
+
+font-weight:700;
+
+}
+
+
+
+.badge span{
+
+background:#dbeafe;
+
+color:#1d4ed8;
+
+font-size:10px;
+
+padding:5px 8px;
+
+border-radius:20px;
+
+}
+
+
+
+
+/* Details */
+
+
+details{
+
+margin-top:10px;
+
+background:#f8fafc;
+
+border-radius:12px;
+
+padding:8px;
+
+font-size:12px;
+
+}
+
+
+summary{
+
+cursor:pointer;
+
+color:#2563eb;
+
+font-weight:600;
+
+list-style:none;
+
+}
+
+
+summary::-webkit-details-marker{
+
+display:none;
+
+}
+
+
+.info{
+
+background:white;
+
+padding:10px;
+
+margin-top:8px;
+
+border-radius:10px;
+
+text-align:left;
+
+}
+
+
+.info p{
+
+margin:5px 0;
+
+}
+
+
+
+
+
+.hidden{
+
+display:none;
+
+}
+
+
+
+
+/* Class Themes */
+
+
+.theme10{
+
+background:linear-gradient(135deg,#dbeafe,#eff6ff);
+
+}
+
+
+
+.theme9{
+
+background:linear-gradient(135deg,#dcfce7,#ecfdf5);
+
+}
+
+
+
+.theme8{
+
+background:linear-gradient(135deg,#fef3c7,#fff7ed);
+
+}
+
+
+
+/* Mobile */
+
+
+@media(max-width:420px){
+
+.grid{
+
+gap:10px;
+
+}
+
+
+.card{
+
+padding:10px;
+
+}
+
+
+.photo{
+
+width:65px;
+
+height:65px;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body class="theme10">
+
+
+
+<div class="header">
+
+<h1>🏆 School Toppers</h1>
+
+<p>Celebrating Academic Excellence</p>
+
+</div>
+
+
+
+
+<div class="class-box">
+
+<h2>
+Class Wise Toppers
+</h2>
+
+
+<div class="tabs">
+
+
+<button class="active" onclick="changeClass(10,this)">
+Class 10
+</button>
+
+
+<button onclick="changeClass(9,this)">
+Class 9
+</button>
+
+
+<button onclick="changeClass(8,this)">
+Class 8
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+<div class="container">
+
+
+<h2 class="title" id="heading">
+Class 10 Toppers
+</h2>
+
+
+
+
+
+<!-- CLASS 10 -->
+
+
+<div class="grid" id="class10">
+
+
+<div class="card">
+
+<div class="rank">
+🥇
+</div>
+
+<img src="images/student1.jpg" class="photo">
+
+
+<h3 class="name">
+Aarav Sharma
+</h3>
+
+<p class="class">
+Class 10 Science
+</p>
+
+
+<div class="score">
+98%
+</div>
+
+
+<div class="badge">
+<span>District Topper</span>
+</div>
+
+
+<details>
+
+<summary>
+👁 View Details
+</summary>
+
+<div class="info">
+
+<p>📚 Subject: Maths</p>
+
+<p>🏆 Award: Gold Medal</p>
+
+<p>📅 Year: 2026</p>
+
+</div>
+
+</details>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<div class="rank">
+🥈
+</div>
+
+<img src="images/student2.jpg" class="photo">
+
+
+<h3 class="name">
+Ananya Patil
+</h3>
+
+
+<p class="class">
+Class 10 Science
+</p>
+
+
+<div class="score">
+97%
+</div>
+
+
+<details>
+
+<summary>
+👁 View Details
+</summary>
+
+
+<div class="info">
+
+<p>📚 Subject: English</p>
+
+<p>🏅 Award: Silver</p>
+
+<p>📅 Year: 2026</p>
+
+</div>
+
+</details>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- CLASS 9 -->
+
+
+<div class="grid hidden" id="class9">
+
+
+<div class="card">
+
+<div class="rank">
+🥇
+</div>
+
+
+<img src="images/student3.jpg" class="photo">
+
+
+<h3 class="name">
+Rahul Verma
+</h3>
+
+
+<p class="class">
+Class 9
+</p>
+
+
+<div class="score">
+96%
+</div>
+
+
+<details>
+
+<summary>
+👁 View Details
+</summary>
+
+
+<div class="info">
+
+<p>🏆 Achievement: First Rank</p>
+
+<p>📅 Year: 2026</p>
+
+</div>
+
+
+</details>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- CLASS 8 -->
+
+
+<div class="grid hidden" id="class8">
+
+
+<div class="card">
+
+
+<div class="rank">
+🥇
+</div>
+
+
+<img src="images/student4.jpg" class="photo">
+
+
+<h3 class="name">
+Riya Sharma
+</h3>
+
+
+<p class="class">
+Class 8
+</p>
+
+
+<div class="score">
+95%
+</div>
+
+
+<details>
+
+<summary>
+👁 View Details
+</summary>
+
+
+<div class="info">
+
+<p>🏆 Achievement: School Topper</p>
+
+<p>📅 Year: 2026</p>
+
+</div>
+
+</details>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+function changeClass(num,btn){
+
+
+document.getElementById("class10").classList.add("hidden");
+
+document.getElementById("class9").classList.add("hidden");
+
+document.getElementById("class8").classList.add("hidden");
+
+
+
+document.getElementById("class"+num).classList.remove("hidden");
+
+
+
+document.getElementById("heading").innerHTML=
+"Class "+num+" Toppers";
+
+
+
+let buttons=document.querySelectorAll(".tabs button");
+
+
+buttons.forEach(b=>{
+
+b.classList.remove("active");
+
+});
+
+
+btn.classList.add("active");
+
+
+
+document.body.className="";
+
+
+
+if(num==10){
+
+document.body.classList.add("theme10");
+
+}
+
+else if(num==9){
+
+document.body.classList.add("theme9");
+
+}
+
+else{
+
+document.body.classList.add("theme8");
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
