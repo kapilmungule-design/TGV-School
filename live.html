@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Live Sports Dashboard</title>
+
+
+<link rel="stylesheet" href="live.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-tower-broadcast"></i>
+
+<div>
+
+<h2>Live Sports</h2>
+
+<small>Smart Score Dashboard</small>
+
+</div>
+
+</div>
+
+
+<a href="admin-login.html">
+
+<i class="fa-solid fa-user-shield"></i>
+
+Admin
+
+</a>
+
+
+</header>
+
+
+
+
+
+
+
+<!-- HERO -->
+
+
+
+<!-- ================= NOTICE ================= -->
+
+
+<div class="notice-box">
+
+
+<i class="fa-solid fa-bullhorn"></i>
+
+
+<span id="notice">
+
+Latest Sports Update Here
+
+</span>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CRICKET -->
+
+
+<section class="sports-title">
+
+<h2>
+
+🏏 Cricket Live
+
+</h2>
+
+</section>
+
+
+
+
+<div class="live-container">
+
+
+
+<div class="live-card cricket">
+
+
+
+<div class="card-head">
+
+
+<h3>
+
+<i class="fa-solid fa-baseball-bat-ball"></i>
+
+Cricket
+
+</h3>
+
+
+<span id="cStatus">
+
+LIVE
+
+</span>
+
+
+</div>
+
+
+
+
+
+<h2 id="cTitle">
+
+Cricket Match
+
+</h2>
+
+
+
+
+
+
+<div class="team-score">
+
+
+
+<div class="team">
+
+
+<div class="team-icon">
+
+🏏
+
+</div>
+
+
+<h3 id="cTeamA">
+
+Team A
+
+</h3>
+
+
+<h1 id="cScoreA">
+
+0/0
+
+</h1>
+
+
+</div>
+
+
+
+
+
+<div class="vs">
+
+VS
+
+</div>
+
+
+
+
+
+
+<div class="team">
+
+
+<div class="team-icon">
+
+🏏
+
+</div>
+
+
+<h3 id="cTeamB">
+
+Team B
+
+</h3>
+
+
+<h1 id="cScoreB">
+
+0/0
+
+</h1>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="match-info">
+
+
+<div>
+
+Overs
+
+<b id="cOvers">
+
+0
+
+</b>
+
+</div>
+
+
+
+<div>
+
+Status
+
+<b id="cStatus2">
+
+LIVE
+
+</b>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= VOLLEYBALL ================= -->
+
+
+<section class="sports-title">
+
+<h2>
+
+🏐 Volleyball Live
+
+</h2>
+
+</section>
+
+
+
+
+<div class="live-card volleyball">
+
+
+
+<div class="card-head">
+
+
+<h3>
+
+<i class="fa-solid fa-volleyball"></i>
+
+Volleyball
+
+</h3>
+
+
+<span>
+
+LIVE
+
+</span>
+
+
+</div>
+
+
+
+
+
+<h2 id="vTitle">
+
+Volleyball Match
+
+</h2>
+
+
+
+
+
+
+<div class="team-score">
+
+
+
+<div class="team">
+
+
+<div class="team-icon">
+
+🏐
+
+</div>
+
+
+<h3 id="vTeamA">
+
+Team A
+
+</h3>
+
+
+<h1 id="vScore">
+
+0-0
+
+</h1>
+
+
+</div>
+
+
+
+
+
+<div class="vs">
+
+VS
+
+</div>
+
+
+
+
+
+
+<div class="team">
+
+
+<div class="team-icon">
+
+🏐
+
+</div>
+
+
+<h3 id="vTeamB">
+
+Team B
+
+</h3>
+
+
+<h1 id="vPoint">
+
+0-0
+
+</h1>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= KABADDI ================= -->
+
+
+<section class="sports-title">
+
+<h2>
+
+🤼 Kabaddi Live
+
+</h2>
+
+</section>
+
+
+
+
+
+<div class="live-card kabaddi">
+
+
+
+<div class="card-head">
+
+
+<h3>
+
+<i class="fa-solid fa-people-group"></i>
+
+Kabaddi
+
+</h3>
+
+
+<span id="kStatus">
+
+LIVE
+
+</span>
+
+
+</div>
+
+
+
+
+
+<h2 id="kTitle">
+
+Kabaddi Match
+
+</h2>
+
+
+
+
+
+
+<div class="team-score">
+
+
+
+<div class="team">
+
+
+<div class="team-icon">
+
+🤼
+
+</div>
+
+
+<h3 id="kTeamA">
+
+Team A
+
+</h3>
+
+
+</div>
+
+
+
+
+
+<div class="vs">
+
+VS
+
+</div>
+
+
+
+
+
+<div class="team">
+
+
+<div class="team-icon">
+
+🤼
+
+</div>
+
+
+<h3 id="kTeamB">
+
+Team B
+
+</h3>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="match-info">
+
+
+<div>
+
+Score
+
+<b id="kScore">
+
+0 - 0
+
+</b>
+
+</div>
+
+
+
+<div>
+
+Time
+
+<b id="kTime">
+
+First Half
+
+</b>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= TOURNAMENT ================= -->
+
+
+
+<section class="tournament-box">
+
+
+
+<h2>
+
+🏆 Tournament Overview
+
+</h2>
+
+
+
+
+<div class="stats-grid">
+
+
+
+<div class="stat">
+
+
+<i class="fa-solid fa-users"></i>
+
+
+<h1 id="tTeams">
+
+0
+
+</h1>
+
+
+<p>
+
+Teams
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat">
+
+
+<i class="fa-solid fa-gamepad"></i>
+
+
+<h1 id="tMatches">
+
+0
+
+</h1>
+
+
+<p>
+
+Matches
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="stat">
+
+
+<i class="fa-solid fa-tower-broadcast"></i>
+
+
+<h1 id="tLive">
+
+0
+
+</h1>
+
+
+<p>
+
+Live Now
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+
+<h2>
+
+Live Sports Dashboard
+
+</h2>
+
+
+<p>
+
+Cricket | Volleyball | Kabaddi
+
+</p>
+
+
+
+<p>
+
+© 2026 Sports Network
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="live.js"></script>
+
+
+</body>
+
+</html>
+
+

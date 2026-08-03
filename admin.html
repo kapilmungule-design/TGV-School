@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Sports Admin Control</title>
+
+
+<link rel="stylesheet" href="admin.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+<script>
+
+if(localStorage.getItem("adminLogin")!="true"){
+
+window.location.href="admin-login.html";
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+<button onclick="logout()">
+Logout
+</button>
+
+
+
+
+
+</button>
+
+
+
+<header>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-user-shield"></i>
+
+<h2>Sports Admin</h2>
+
+</div>
+
+
+
+<a href="live.html">
+
+<i class="fa-solid fa-tv"></i>
+
+Live View
+
+</a>
+
+
+</header>
+
+
+
+
+
+
+
+
+<section class="admin-title">
+
+
+<h1>
+
+Live Match Control
+
+</h1>
+
+
+<p>
+
+Update all sports information from here
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<div class="admin-wrapper">
+
+
+
+
+
+
+
+<!-- ================= CRICKET ================= -->
+
+
+<div class="admin-card cricket">
+
+
+<h2>
+
+🏏 Cricket Control
+
+</h2>
+
+
+
+<label>
+
+Match Title
+
+</label>
+
+
+<input id="cTitle"
+type="text"
+placeholder="ABC School vs XYZ School">
+
+
+
+
+
+<label>
+
+Team A Name
+
+</label>
+
+
+<input id="cTeamA"
+type="text"
+placeholder="Team A">
+
+
+
+
+
+<label>
+
+Team B Name
+
+</label>
+
+
+<input id="cTeamB"
+type="text"
+placeholder="Team B">
+
+
+
+
+
+
+<label>
+
+Team A Score
+
+</label>
+
+
+<input id="cScoreA"
+type="text"
+placeholder="120/3">
+
+
+
+
+
+<label>
+
+Team B Score
+
+</label>
+
+
+<input id="cScoreB"
+type="text"
+placeholder="100/8">
+
+
+
+
+
+
+<label>
+
+Overs
+
+</label>
+
+
+<input id="cOvers"
+type="text"
+placeholder="18.2">
+
+
+
+
+
+<label>
+
+Status
+
+</label>
+
+
+<select id="cStatus">
+
+
+<option>
+
+LIVE
+
+</option>
+
+
+<option>
+
+UPCOMING
+
+</option>
+
+
+<option>
+
+COMPLETED
+
+</option>
+
+
+</select>
+
+
+
+<button onclick="saveCricket()">
+
+Save Cricket
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= VOLLEYBALL ================= -->
+
+
+
+<div class="admin-card volleyball">
+
+
+<h2>
+
+🏐 Volleyball Control
+
+</h2>
+
+
+
+<label>
+
+Match Title
+
+</label>
+
+
+<input id="vTitle"
+type="text"
+placeholder="Blue vs Red">
+
+
+
+
+
+
+<label>
+
+Team A Name
+
+</label>
+
+
+<input id="vTeamA"
+type="text"
+placeholder="Team A">
+
+
+
+
+
+
+<label>
+
+Team B Name
+
+</label>
+
+
+<input id="vTeamB"
+type="text"
+placeholder="Team B">
+
+
+
+
+
+
+<label>
+
+Set Score
+
+</label>
+
+
+<input id="vScore"
+type="text"
+placeholder="2 - 1">
+
+
+
+
+
+<label>
+
+Current Point
+
+</label>
+
+
+<input id="vPoint"
+type="text"
+placeholder="22 - 18">
+
+
+
+
+
+<button onclick="saveVolley()">
+
+Save Volleyball
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+<!-- ================= KABADDI ================= -->
+
+
+<div class="admin-card kabaddi">
+
+
+<h2>
+
+🤼 Kabaddi Control
+
+</h2>
+
+
+
+<label>
+
+Match Title
+
+</label>
+
+
+<input id="kTitle"
+
+type="text"
+
+placeholder="Warriors vs Panthers">
+
+
+
+
+
+<label>
+
+Team A Name
+
+</label>
+
+
+<input id="kTeamA"
+
+type="text"
+
+placeholder="Team A">
+
+
+
+
+
+<label>
+
+Team B Name
+
+</label>
+
+
+<input id="kTeamB"
+
+type="text"
+
+placeholder="Team B">
+
+
+
+
+
+
+<label>
+
+Score
+
+</label>
+
+
+<input id="kScore"
+
+type="text"
+
+placeholder="32 - 28">
+
+
+
+
+
+<label>
+
+Time / Half
+
+</label>
+
+
+<input id="kTime"
+
+type="text"
+
+placeholder="Second Half 05:20">
+
+
+
+
+
+<label>
+
+Status
+
+</label>
+
+
+<select id="kStatus">
+
+
+<option>
+
+LIVE
+
+</option>
+
+
+<option>
+
+UPCOMING
+
+</option>
+
+
+<option>
+
+COMPLETED
+
+</option>
+
+
+</select>
+
+
+
+
+
+<button onclick="saveKabaddi()">
+
+Save Kabaddi
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= TOURNAMENT ================= -->
+
+
+
+<div class="admin-card tournament">
+
+
+<h2>
+
+🏆 Tournament Control
+
+</h2>
+
+
+
+
+<label>
+
+Tournament Name
+
+</label>
+
+
+<input id="tName"
+
+type="text"
+
+placeholder="Annual Sports Championship">
+
+
+
+
+
+<label>
+
+Total Teams
+
+</label>
+
+
+<input id="tTeams"
+
+type="text"
+
+placeholder="24">
+
+
+
+
+
+<label>
+
+Total Matches
+
+</label>
+
+
+<input id="tMatches"
+
+type="text"
+
+placeholder="50">
+
+
+
+
+
+<label>
+
+Live Matches
+
+</label>
+
+
+<input id="tLive"
+
+type="text"
+
+placeholder="3">
+
+
+
+
+
+<button onclick="saveTournament()">
+
+Update Tournament
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= ANNOUNCEMENT ================= -->
+
+
+
+<div class="admin-card announcement">
+
+
+<h2>
+
+📢 Announcement
+
+</h2>
+
+
+
+<textarea id="notice"
+
+placeholder="Enter latest sports update">
+
+</textarea>
+
+
+
+
+
+<button onclick="saveNotice()">
+
+Publish Notice
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= CONTROL ================= -->
+
+
+<div class="admin-card control">
+
+
+<h2>
+
+⚙️ System Control
+
+</h2>
+
+
+
+<button onclick="clearAllData()">
+
+Delete All Data
+
+</button>
+
+
+
+<a href="live.html">
+
+Open Live Dashboard
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<footer>
+
+
+<p>
+
+Sports Admin Panel © 2026
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
