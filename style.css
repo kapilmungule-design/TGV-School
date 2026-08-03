@@ -8922,3 +8922,38 @@ bottom:120px;
 
 
 }
+
+
+.bottom-logo{
+
+text-align:center;
+
+padding:15px;
+
+background:#000;
+
+}
+
+
+.bottom-logo img{
+
+width:200px;
+
+height:80px;
+
+object-fit:contain;
+
+}
+
+
+@media(max-width:768px){
+
+.bottom-logo img{
+
+width:200px;
+
+height:65px;
+
+}
+
+}
